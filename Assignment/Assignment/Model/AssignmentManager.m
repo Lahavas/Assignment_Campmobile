@@ -20,8 +20,10 @@
 
 + (NSArray *)secondWeekAssignment {
     Assignment *assignmentView = [[Assignment alloc] initWithTitle:@"UIView" andType:AssignmentView];
+    Assignment *assignmentSimpleAnimation = [[Assignment alloc] initWithTitle:@"Simple Animation" andType:AssignmentSimpleAnimation];
+    Assignment *assignmentSpringAnimation = [[Assignment alloc] initWithTitle:@"Spring Animation" andType:AssignmentSpringAnimation];
     
-    return @[assignmentView];
+    return @[assignmentView, assignmentSimpleAnimation, assignmentSpringAnimation];
 }
 
 + (NSArray *)thirdWeekAssignment {

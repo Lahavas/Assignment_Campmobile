@@ -22,6 +22,7 @@
         [self setLastName];
         
         [self setPhoneType];
+        [self setPhoneNumber];
     }
     
     return self;
@@ -48,10 +49,7 @@
 }
 
 - (void)setFirstName {
-    CGFloat firstNameOriginX = self.profileImageView.frame.origin.x + self.profileImageView.frame.size.width + 15.0;
-    CGFloat firstNameOriginY = 10.0;
-    CGFloat firstNameSizeWidth = self.contentView.frame.size.width - firstNameOriginX - 15.0;
-    CGFloat firstNameSizeHeight = 15.0;
+    
     
     self.firstNameLabel = [[UILabel alloc] init];
     
@@ -60,17 +58,11 @@
     [self.firstNameLabel setTextAlignment:NSTextAlignmentLeft];
     [self.firstNameLabel setFont:[UIFont systemFontOfSize:15.0]];
     
-    [self.firstNameLabel sizeToFit];
-    [self.firstNameLabel setFrame:CGRectMake(firstNameOriginX, firstNameOriginY, firstNameSizeWidth, firstNameSizeHeight)];
-    
     [self.contentView addSubview:self.firstNameLabel];
 }
 
 - (void)setLastName {
-    CGFloat lastNameOriginX = self.profileImageView.frame.origin.x + self.profileImageView.frame.size.width + 15.0;
-    CGFloat lastNameOriginY = self.firstNameLabel.frame.origin.y + self.firstNameLabel.frame.size.height + 15.0;
-    CGFloat lastNameSizeWidth = self.contentView.frame.size.width - lastNameOriginX - 15.0;
-    CGFloat lastNameSizeHeight = 15.0;
+    
     
     self.lastNameLabel = [[UILabel alloc] init];
     
@@ -79,18 +71,10 @@
     [self.lastNameLabel setTextAlignment:NSTextAlignmentLeft];
     [self.lastNameLabel setFont:[UIFont systemFontOfSize:15.0]];
     
-    [self.lastNameLabel sizeToFit];
-    [self.lastNameLabel setFrame:CGRectMake(lastNameOriginX, lastNameOriginY, lastNameSizeWidth, lastNameSizeHeight)];
-    
     [self.contentView addSubview:self.lastNameLabel];
 }
 
 - (void)setPhoneType {
-    CGFloat phoneTypeOriginX = 15.0;
-    CGFloat phoneTypeOriginY = self.profileImageView.frame.origin.y + self.profileImageView.frame.size.height + 15.0;
-    CGFloat phoneTypeSizeWidth = 15.0;
-    CGFloat phoneTypeSizeHeight = 15.0;
-    
     self.phoneTypeLabel = [[UILabel alloc] init];
     
     [self.phoneTypeLabel setNumberOfLines:1];
@@ -98,10 +82,22 @@
     [self.phoneTypeLabel setTextAlignment:NSTextAlignmentLeft];
     [self.phoneTypeLabel setFont:[UIFont systemFontOfSize:15.0]];
     
-    [self.phoneTypeLabel sizeToFit];
-    [self.phoneTypeLabel setFrame:CGRectMake(phoneTypeOriginX, phoneTypeOriginY, phoneTypeSizeWidth, phoneTypeSizeHeight)];
+    
     
     [self.contentView addSubview:self.phoneTypeLabel];
+}
+
+- (void)setPhoneNumber {
+    
+    
+    self.phoneNumberLabel = [[UILabel alloc] init];
+    
+    [self.phoneNumberLabel setNumberOfLines:1];
+    [self.phoneNumberLabel setTextColor:UIColor.blackColor];
+    [self.phoneNumberLabel setTextAlignment:NSTextAlignmentLeft];
+    [self.phoneNumberLabel setFont:[UIFont systemFontOfSize:15.0]];
+    
+    [self.contentView addSubview:self.phoneNumberLabel];
 }
 
 @end

@@ -23,6 +23,10 @@
 		7A9359431FB1B7D800618360 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9359411FB1B7D800618360 /* ContactsViewController.xib */; };
 		7A9359461FB1B7E500618360 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9359451FB1B7E500618360 /* PageViewController.m */; };
 		7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */; };
+		CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8095261FB29EFB00079E17 /* SimpleAnimationViewController.m */; };
+		CE8095291FB29EFB00079E17 /* SimpleAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8095271FB29EFB00079E17 /* SimpleAnimationViewController.xib */; };
+		CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */; };
+		CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,12 @@
 		7A9359441FB1B7E500618360 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		7A9359451FB1B7E500618360 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE8095251FB29EFB00079E17 /* SimpleAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAnimationViewController.h; sourceTree = "<group>"; };
+		CE8095261FB29EFB00079E17 /* SimpleAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAnimationViewController.m; sourceTree = "<group>"; };
+		CE8095271FB29EFB00079E17 /* SimpleAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAnimationViewController.xib; sourceTree = "<group>"; };
+		CE80952A1FB2CF7000079E17 /* SpringAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringAnimationViewController.h; sourceTree = "<group>"; };
+		CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringAnimationViewController.m; sourceTree = "<group>"; };
+		CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpringAnimationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,12 @@
 			children = (
 				7A2572DE1FB22639005F4E87 /* CustomViewController.h */,
 				7A2572DF1FB22639005F4E87 /* CustomViewController.m */,
+				CE8095251FB29EFB00079E17 /* SimpleAnimationViewController.h */,
+				CE8095261FB29EFB00079E17 /* SimpleAnimationViewController.m */,
+				CE8095271FB29EFB00079E17 /* SimpleAnimationViewController.xib */,
+				CE80952A1FB2CF7000079E17 /* SpringAnimationViewController.h */,
+				CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */,
+				CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */,
 			);
 			path = "Second Week";
 			sourceTree = "<group>";
@@ -335,8 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */,
+				CE8095291FB29EFB00079E17 /* SimpleAnimationViewController.xib in Resources */,
 				7A8065BA1FB158AE00CEAF02 /* Assets.xcassets in Resources */,
 				7A9359431FB1B7D800618360 /* ContactsViewController.xib in Resources */,
+				CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +381,13 @@
 			files = (
 				7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */,
 				7A2572E71FB231FF005F4E87 /* ContactsTableViewCell.m in Sources */,
+				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
 				7A9359421FB1B7D800618360 /* ContactsViewController.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
 				7A2572E01FB22639005F4E87 /* CustomViewController.m in Sources */,
+				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,
 				7A8065B21FB158AE00CEAF02 /* AppDelegate.m in Sources */,
 				7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */,

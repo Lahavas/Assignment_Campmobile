@@ -13,7 +13,10 @@
 
 #import "ContactsViewController.h"
 #import "PageViewController.h"
+
 #import "CustomViewController.h"
+#import "SimpleAnimationViewController.h"
+#import "SpringAnimationViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -80,7 +83,7 @@
     if (type == AssignmentContacts) {
         ContactsViewController *contactsViewController = [[ContactsViewController alloc] init];
         
-        [self presentViewController:contactsViewController animated:YES completion:nil];
+        [self.navigationController pushViewController:contactsViewController animated:YES];
     } else if (type == AssignmentPages) {
         PageViewController *pageViewController = [[PageViewController alloc] init];
         
@@ -89,6 +92,14 @@
         CustomViewController *customViewController = [[CustomViewController alloc] init];
         
         [self.navigationController pushViewController:customViewController animated:YES];
+    } else if (type == AssignmentSimpleAnimation) {
+        SimpleAnimationViewController *simpleAnimationViewController = [[SimpleAnimationViewController alloc] init];
+        
+        [self.navigationController pushViewController:simpleAnimationViewController animated:YES];
+    } else if (type == AssignmentSpringAnimation) {
+        SpringAnimationViewController *springAnimationViewController = [[SpringAnimationViewController alloc] init];
+        
+        [self.navigationController pushViewController:springAnimationViewController animated:YES];
     }
 }
 
