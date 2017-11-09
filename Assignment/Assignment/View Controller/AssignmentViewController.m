@@ -14,7 +14,7 @@
 #import "ContactsViewController.h"
 #import "PageViewController.h"
 
-#import "CustomViewController.h"
+#import "AutoResizingTestViewController.h"
 #import "SimpleAnimationViewController.h"
 #import "SpringAnimationViewController.h"
 
@@ -90,10 +90,10 @@
         PageViewController *pageViewController = [[PageViewController alloc] init];
         
         [self.navigationController pushViewController:pageViewController animated:YES];
-    } else if (type == AssignmentView) {
-        CustomViewController *customViewController = [[CustomViewController alloc] init];
+    } else if (type == AssignmentAutoResizing) {
+        AutoResizingTestViewController *autoResizingTestViewController = [[AutoResizingTestViewController alloc] init];
         
-        [self.navigationController pushViewController:customViewController animated:YES];
+        [self.navigationController pushViewController:autoResizingTestViewController animated:YES];
     } else if (type == AssignmentSimpleAnimation) {
         SimpleAnimationViewController *simpleAnimationViewController = [[SimpleAnimationViewController alloc] init];
         

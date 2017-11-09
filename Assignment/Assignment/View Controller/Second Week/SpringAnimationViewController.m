@@ -23,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
     self.originalFrame = self.targetView.frame;
 }
 
@@ -36,17 +41,18 @@
 #pragma mark - Actions
 
 - (IBAction)tapRootView:(id)sender {
-    
     CGFloat floorDy = self.view.frame.size.height - self.targetView.frame.origin.y - self.targetView.frame.size.height - self.tabBarController.tabBar.frame.size.height;
+    
+    __weak typeof(self) weakSelf = self;
     
     if (CGRectEqualToRect(self.targetView.frame, self.originalFrame)) {
         [UIView animateWithDuration:3.0
                               delay:0.0
              usingSpringWithDamping:0.1
               initialSpringVelocity:0.9
-                            options:0
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             [self.targetView setFrame:CGRectOffset(self.targetView.frame, 0.0, floorDy)];
+                             [weakSelf.targetView setFrame:CGRectOffset(weakSelf.targetView.frame, 0.0, floorDy)];
                          }
                          completion:nil];
     } else {
@@ -54,25 +60,34 @@
                               delay:0.0
              usingSpringWithDamping:0.1
               initialSpringVelocity:0.9
-                            options:0
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             [self.targetView setFrame:self.originalFrame];
+                             [weakSelf.targetView setFrame:weakSelf.originalFrame];
                          }
                          completion:nil];
     }
 }
 
 - (IBAction)tapTargetView:(id)sender {
-    [UIView animateWithDuration:3.0
+    __weak typeof(self) weakSelf = self;
+    
+    [UIView animateWithDuration:1.5
                           delay:0.0
          usingSpringWithDamping:0.2
           initialSpringVelocity:0.5
-                        options:0
+                        options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         [self.targetView setTransform:CGAffineTransformMakeScale(0.5, 0.5)];
+                         [weakSelf.targetView setTransform:CGAffineTransformMakeScale(0.5, 0.5)];
                      }
                      completion:^(BOOL finished) {
-                         
+                         [UIView animateWithDuration:1.5
+                                               delay:0.0
+                              usingSpringWithDamping:0.2
+                               initialSpringVelocity:0.5
+                                             options:UIViewAnimationOptionCurveEaseInOut
+                                          animations:^{
+                                              [weakSelf.targetView setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+                                          } completion:nil];
                      }];
 }
 

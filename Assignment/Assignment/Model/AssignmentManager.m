@@ -19,11 +19,11 @@
 }
 
 + (NSArray *)secondWeekAssignment {
-    Assignment *assignmentView = [[Assignment alloc] initWithTitle:@"UIView" andType:AssignmentView];
+    Assignment *assignmentAutoResizing = [[Assignment alloc] initWithTitle:@"Auto Resizing Test" andType:AssignmentAutoResizing];
     Assignment *assignmentSimpleAnimation = [[Assignment alloc] initWithTitle:@"Simple Animation" andType:AssignmentSimpleAnimation];
     Assignment *assignmentSpringAnimation = [[Assignment alloc] initWithTitle:@"Spring Animation" andType:AssignmentSpringAnimation];
     
-    return @[assignmentView, assignmentSimpleAnimation, assignmentSpringAnimation];
+    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation];
 }
 
 + (NSArray *)thirdWeekAssignment {

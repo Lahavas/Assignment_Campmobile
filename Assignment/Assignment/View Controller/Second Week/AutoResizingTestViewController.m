@@ -1,20 +1,22 @@
 //
-//  CustomViewController.m
+//  AutoResizingTestViewController.m
 //  Assignment
 //
-//  Created by Jaeho on 2017. 11. 8..
+//  Created by USER on 2017. 11. 9..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "CustomViewController.h"
+#import "AutoResizingTestViewController.h"
 
-@interface CustomViewController ()
+@interface AutoResizingTestViewController ()
 
 @end
 
 #pragma mark -
 
-@implementation CustomViewController
+@implementation AutoResizingTestViewController
+
+#pragma mark - View Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,22 +39,24 @@
     [secondView setCenter:CGPointMake(55, 200)];
     
     [firstView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin |
-                                   UIViewAutoresizingFlexibleLeftMargin |
-                                   UIViewAutoresizingFlexibleRightMargin |
-                                   UIViewAutoresizingFlexibleBottomMargin |
-                                   UIViewAutoresizingFlexibleWidth |
-                                   UIViewAutoresizingFlexibleHeight];
+     UIViewAutoresizingFlexibleLeftMargin |
+     UIViewAutoresizingFlexibleRightMargin |
+     UIViewAutoresizingFlexibleBottomMargin |
+     UIViewAutoresizingFlexibleWidth |
+     UIViewAutoresizingFlexibleHeight];
     
     [secondView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin |
-                                    UIViewAutoresizingFlexibleLeftMargin |
-                                    UIViewAutoresizingFlexibleRightMargin |
-                                    UIViewAutoresizingFlexibleBottomMargin |
-                                    UIViewAutoresizingFlexibleWidth |
-                                    UIViewAutoresizingFlexibleHeight];
+     UIViewAutoresizingFlexibleLeftMargin |
+     UIViewAutoresizingFlexibleRightMargin |
+     UIViewAutoresizingFlexibleBottomMargin |
+     UIViewAutoresizingFlexibleWidth |
+     UIViewAutoresizingFlexibleHeight];
     
     [self.view addSubview:firstView];
     [self.view addSubview:secondView];
 }
+
+#pragma mark - Memory Management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -12,7 +12,7 @@ typedef NS_ENUM(NSInteger, AssignmentType) {
     AssignmentDefault,
     AssignmentContacts,
     AssignmentPages,
-    AssignmentView,
+    AssignmentAutoResizing,
     AssignmentSimpleAnimation,
     AssignmentSpringAnimation
 };

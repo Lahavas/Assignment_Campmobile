@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.contactsTableView = [[UITableView alloc] init];
+    self.contactsTableView = [[UITableView alloc] initWithFrame:self.view.frame];
     
     [self.contactsTableView setDelegate:self];
     [self.contactsTableView setDataSource:self];
@@ -37,9 +37,7 @@
                           [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
                           [[Contact alloc] initWithFirstName:@"Three" andLastName:@"Third" andPhoneType:@"휴대전화" andPhoneNumber:@"010-3333-3333"]];
     
-    [self.contactsTableView setRowHeight:140.0];
-    
-    self.view = self.contactsTableView;
+    [self.view addSubview:self.contactsTableView];
 }
 
 #pragma mark - Memory Management
@@ -101,6 +99,10 @@
     [contactsTableViewCell.phoneNumberLabel setFrame:CGRectMake(phoneNumberOriginX, phoneNumberOriginY, phoneNumberSizeWidth, phoneNumberSizeHeight)];
     
     return contactsTableViewCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 140.0;
 }
 
 @end

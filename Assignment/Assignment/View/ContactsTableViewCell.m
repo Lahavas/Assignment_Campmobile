@@ -88,8 +88,6 @@
 }
 
 - (void)setPhoneNumber {
-    
-    
     self.phoneNumberLabel = [[UILabel alloc] init];
     
     [self.phoneNumberLabel setNumberOfLines:1];

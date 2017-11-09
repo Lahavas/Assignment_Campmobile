@@ -33,6 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
     self.originalFrame = self.firstView.frame;
 }
 
@@ -64,12 +69,13 @@
 - (IBAction)touchSecondButton:(id)sender {
     [self.firstView.layer removeAllAnimations];
     
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:3.0 animations:^{
         [UIView setAnimationBeginsFromCurrentState:YES];
-        [UIView setAnimationDelegate:self];
+        [UIView setAnimationDelegate:weakSelf];
         [UIView setAnimationRepeatAutoreverses:YES];
         
-        [self.firstView setFrame:self.secondView.frame];
+        [weakSelf.firstView setFrame:weakSelf.secondView.frame];
         
         [UIView setAnimationDidStopSelector:@selector(setOriginalFrame)];
     }];
@@ -79,32 +85,34 @@
 - (IBAction)touchThirdButton:(id)sender {
     [self.firstView.layer removeAllAnimations];
     
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:3.0
                           delay:0.0
                         options:UIViewAnimationOptionAutoreverse
                      animations:^{
-                         [self.firstView setFrame:self.secondView.frame];
+                         [weakSelf.firstView setFrame:weakSelf.secondView.frame];
                      } 
                      completion:^(BOOL finished) {
-                         [self.firstView setFrame:self.originalFrame];
+                         [weakSelf.firstView setFrame:weakSelf.originalFrame];
                      }];
 }
 
 - (IBAction)touchFourthButton:(id)sender {
     [self.firstView.layer removeAllAnimations];
     
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:1.5
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         [self.firstView setTransform:CGAffineTransformMakeRotation(M_PI)];
+                         [weakSelf.firstView setTransform:CGAffineTransformMakeRotation(M_PI)];
                      }
                      completion:^(BOOL finished) {
                          [UIView animateWithDuration:1.5
                                                delay:0.0
                                              options:UIViewAnimationOptionCurveEaseOut
                                           animations:^{
-                                              [self.firstView setTransform:CGAffineTransformMakeRotation(M_PI * 2)];
+                                              [weakSelf.firstView setTransform:CGAffineTransformMakeRotation(M_PI * 2)];
                                           }
                                           completion:nil];
                      }];
