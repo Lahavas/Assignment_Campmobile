@@ -18,6 +18,7 @@
 		7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8065FF1FB1639700CEAF02 /* AssignmentViewController.m */; };
 		7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660B1FB1826C00CEAF02 /* Assignment.m */; };
 		7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */; };
+		7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A867E081FB50F4800603CCE /* StandardCellViewController.m */; };
 		7A9359421FB1B7D800618360 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9359401FB1B7D800618360 /* ContactsViewController.m */; };
 		7A9359461FB1B7E500618360 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9359451FB1B7E500618360 /* PageViewController.m */; };
 		7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */; };
@@ -70,6 +71,8 @@
 		7A80660B1FB1826C00CEAF02 /* Assignment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
 		7A80660D1FB1A36800CEAF02 /* AssignmentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignmentManager.h; sourceTree = "<group>"; };
 		7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignmentManager.m; sourceTree = "<group>"; };
+		7A867E071FB50F4800603CCE /* StandardCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardCellViewController.h; sourceTree = "<group>"; };
+		7A867E081FB50F4800603CCE /* StandardCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardCellViewController.m; sourceTree = "<group>"; };
 		7A93593F1FB1B7D800618360 /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		7A9359401FB1B7D800618360 /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		7A9359441FB1B7E500618360 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				CE80952A1FB2CF7000079E17 /* SpringAnimationViewController.h */,
 				CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */,
 				CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */,
+				7A867E071FB50F4800603CCE /* StandardCellViewController.h */,
+				7A867E081FB50F4800603CCE /* StandardCellViewController.m */,
 			);
 			path = "Second Week";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
+				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,

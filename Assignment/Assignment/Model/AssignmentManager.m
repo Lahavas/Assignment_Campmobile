@@ -22,8 +22,9 @@
     Assignment *assignmentAutoResizing = [[Assignment alloc] initWithTitle:@"Auto Resizing Test" andType:AssignmentAutoResizing];
     Assignment *assignmentSimpleAnimation = [[Assignment alloc] initWithTitle:@"Simple Animation" andType:AssignmentSimpleAnimation];
     Assignment *assignmentSpringAnimation = [[Assignment alloc] initWithTitle:@"Spring Animation" andType:AssignmentSpringAnimation];
+    Assignment *assignmentStandardCell = [[Assignment alloc] initWithTitle:@"Standard Cell" andType:AssignmentStandardCell];
     
-    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation];
+    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation, assignmentStandardCell];
 }
 
 + (NSArray *)thirdWeekAssignment {

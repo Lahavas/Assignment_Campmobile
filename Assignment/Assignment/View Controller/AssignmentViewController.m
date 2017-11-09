@@ -17,6 +17,7 @@
 #import "AutoResizingTestViewController.h"
 #import "SimpleAnimationViewController.h"
 #import "SpringAnimationViewController.h"
+#import "StandardCellViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -102,6 +103,10 @@
         SpringAnimationViewController *springAnimationViewController = [[SpringAnimationViewController alloc] init];
         
         [self.navigationController pushViewController:springAnimationViewController animated:YES];
+    } else if (type == AssignmentStandardCell) {
+        StandardCellViewController *standardCellViewController = [[StandardCellViewController alloc] init];
+        
+        [self.navigationController pushViewController:standardCellViewController animated:YES];
     }
 }
 
