@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self.tabBarController.tabBar setTranslucent:NO];
+    
     [self.view setBackgroundColor:UIColor.whiteColor];
     
     UIView *firstView = [[UIView alloc] init];

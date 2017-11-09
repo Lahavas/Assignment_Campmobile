@@ -26,21 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:UIColor.whiteColor];
-    
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                             options:nil];
-    
-    [self.pageViewController.view setFrame:self.view.frame];
     
     [self.pageViewController setDelegate:self];
     [self.pageViewController setDataSource:self];
     
     PageChildViewController *initialViewController = [self viewControllerAtIndex:1];
-    
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
-    
     [self.pageViewController setViewControllers:viewControllers
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:YES
@@ -49,6 +43,14 @@
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.view setBackgroundColor:UIColor.whiteColor];
+    
+    [self.pageViewController.view setFrame:self.view.frame];
 }
 
 #pragma mark - Memory Management

@@ -8,11 +8,11 @@
 
 #import "SimpleAnimationViewController.h"
 
-@interface SimpleAnimationViewController () {
-    CGRect _originalFrame;
-}
+@interface SimpleAnimationViewController ()
 
 #pragma mark - Private Properties
+
+@property (assign, nonatomic) CGRect originalFrame;
 
 @property (weak, nonatomic) IBOutlet UIView *firstView;
 @property (weak, nonatomic) IBOutlet UIView *secondView;
@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.originalFrame = self.firstView.frame;
 }
 
 #pragma mark - Memory Management
@@ -46,77 +46,74 @@
 #pragma mark - Actions
 
 - (IBAction)touchFirstButton:(id)sender {
-    _originalFrame = self.firstView.frame;
+    [self.firstView.layer removeAllAnimations];
     
     [UIView beginAnimations:@"MoveView" context:nil];
     [UIView setAnimationDuration:3.0];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDelegate:self];
-    
-//    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-//    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-//    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationRepeatAutoreverses:YES];
     
     [self.firstView setFrame:self.secondView.frame];
     
-    [UIView setAnimationDidStopSelector:@selector(setOriginalFrame:finished:context:)];
+    [UIView setAnimationDidStopSelector:@selector(setOriginalFrame)];
     
     [UIView commitAnimations];
 }
 
 - (IBAction)touchSecondButton:(id)sender {
-    _originalFrame = self.firstView.frame;
+    [self.firstView.layer removeAllAnimations];
     
     [UIView animateWithDuration:3.0 animations:^{
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationDelegate:self];
+        [UIView setAnimationRepeatAutoreverses:YES];
         
         [self.firstView setFrame:self.secondView.frame];
         
-        [UIView setAnimationDidStopSelector:@selector(setOriginalFrame:finished:context:)];
+        [UIView setAnimationDidStopSelector:@selector(setOriginalFrame)];
     }];
     
 }
 
 - (IBAction)touchThirdButton:(id)sender {
-    _originalFrame = self.firstView.frame;
+    [self.firstView.layer removeAllAnimations];
     
     [UIView animateWithDuration:3.0
                           delay:0.0
-                        options:UIViewAnimationOptionAutoreverse |
-                                UIViewAnimationOptionBeginFromCurrentState
+                        options:UIViewAnimationOptionAutoreverse
                      animations:^{
                          [self.firstView setFrame:self.secondView.frame];
                      } 
                      completion:^(BOOL finished) {
-                         [self.firstView setFrame:_originalFrame];
+                         [self.firstView setFrame:self.originalFrame];
                      }];
 }
 
 - (IBAction)touchFourthButton:(id)sender {
-    [UIView animateWithDuration:3.0
+    [self.firstView.layer removeAllAnimations];
+    
+    [UIView animateWithDuration:1.5
                           delay:0.0
-                        options:UIViewAnimationOptionBeginFromCurrentState
+                        options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          [self.firstView setTransform:CGAffineTransformMakeRotation(M_PI)];
                      }
-                     completion:nil
-     ];
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:1.5
+                                               delay:0.0
+                                             options:UIViewAnimationOptionCurveEaseOut
+                                          animations:^{
+                                              [self.firstView setTransform:CGAffineTransformMakeRotation(M_PI * 2)];
+                                          }
+                                          completion:nil];
+                     }];
 }
 
 #pragma mark - Private Methods
 
-- (void)setOriginalFrame:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
-{
-    [UIView beginAnimations:@"MoveView2" context:nil];
-    [UIView setAnimationDuration:3.0];
-    [UIView setAnimationDelay:0.0];
-    
-    [self.firstView setFrame:_originalFrame];
-    
-    [UIView commitAnimations];
+- (void)setOriginalFrame {
+    [self.firstView setFrame:self.originalFrame];
 }
-
 
 @end
