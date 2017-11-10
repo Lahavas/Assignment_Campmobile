@@ -28,11 +28,39 @@
     return self;
 }
 
-#pragma mark - View Life Cycle
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat marginValue = 15.0;
+    
+    CGFloat firstNameOriginX = self.profileImageView.frame.origin.x + self.profileImageView.frame.size.width + marginValue;
+    CGFloat firstNameOriginY = marginValue;
+    CGFloat firstNameSizeWidth = self.contentView.frame.size.width - firstNameOriginX - marginValue;
+    CGFloat firstNameSizeHeight = marginValue;
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+    CGFloat lastNameOriginX = self.profileImageView.frame.origin.x + self.profileImageView.frame.size.width + marginValue;
+    CGFloat lastNameOriginY = firstNameOriginY + firstNameSizeHeight + marginValue;
+    CGFloat lastNameSizeWidth = self.contentView.frame.size.width - lastNameOriginX - marginValue;
+    CGFloat lastNameSizeHeight = marginValue;
+
+    CGFloat phoneTypeOriginX = marginValue;
+    CGFloat phoneTypeOriginY = self.profileImageView.frame.origin.y + self.profileImageView.frame.size.height + marginValue;
+    CGFloat phoneTypeSizeWidth = [self.phoneTypeLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneTypeLabel.font}].width;
+    CGFloat phoneTypeSizeHeight = [self.phoneTypeLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneTypeLabel.font}].height;
+
+    CGFloat phoneNumberOriginX = phoneTypeOriginX + phoneTypeSizeWidth + 15.0;
+    CGFloat phoneNumberOriginY = self.profileImageView.frame.origin.y + self.profileImageView.frame.size.height + 15.0;
+    CGFloat phoneNumberSizeWidth = self.contentView.frame.size.width - phoneNumberOriginX - 15.0;
+    CGFloat phoneNumberSizeHeight = [self.phoneNumberLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneNumberLabel.font}].height;
+    
+    [self.firstNameLabel setFrame:CGRectMake(firstNameOriginX, firstNameOriginY, firstNameSizeWidth, firstNameSizeHeight)];
+    [self.lastNameLabel setFrame:CGRectMake(lastNameOriginX, lastNameOriginY, lastNameSizeWidth, lastNameSizeHeight)];
+    [self.phoneTypeLabel setFrame:CGRectMake(phoneTypeOriginX, phoneTypeOriginY, phoneTypeSizeWidth, phoneTypeSizeHeight)];
+    [self.phoneNumberLabel setFrame:CGRectMake(phoneNumberOriginX, phoneNumberOriginY, phoneNumberSizeWidth, phoneNumberSizeHeight)];
+    
+    [self.profileImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                               UIViewAutoresizingFlexibleHeight |
+                                               UIViewAutoresizingFlexibleRightMargin];
 }
 
 #pragma mark - Private Methods
@@ -49,8 +77,6 @@
 }
 
 - (void)setFirstName {
-    
-    
     self.firstNameLabel = [[UILabel alloc] init];
     
     [self.firstNameLabel setNumberOfLines:1];
@@ -62,8 +88,6 @@
 }
 
 - (void)setLastName {
-    
-    
     self.lastNameLabel = [[UILabel alloc] init];
     
     [self.lastNameLabel setNumberOfLines:1];
@@ -81,8 +105,6 @@
     [self.phoneTypeLabel setTextColor:UIColor.blackColor];
     [self.phoneTypeLabel setTextAlignment:NSTextAlignmentLeft];
     [self.phoneTypeLabel setFont:[UIFont systemFontOfSize:15.0]];
-    
-    
     
     [self.contentView addSubview:self.phoneTypeLabel];
 }
