@@ -33,7 +33,7 @@
     [self.contactsTableView setDelegate:self];
     [self.contactsTableView setDataSource:self];
     
-    [self.contactsTableView registerClass:ContactsTableViewCell.self forCellReuseIdentifier:@"ContactsTableViewCell"];
+    [self.contactsTableView registerClass:ContactsTableViewCell.self forCellReuseIdentifier:cellIdentifier];
     
     self.contactArray = @[[[Contact alloc] initWithFirstName:@"One" andLastName:@"Firstasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfasdfasdfasdfasdfasdfasdfasdf" andPhoneType:@"집" andPhoneNumber:@"010-1111-1111"],
                           [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
@@ -60,7 +60,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ContactsTableViewCell *contactsTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"ContactsTableViewCell" forIndexPath:indexPath];
+    
+    
+    ContactsTableViewCell *contactsTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     Contact *contact = [self.contactArray objectAtIndex:indexPath.row];
     

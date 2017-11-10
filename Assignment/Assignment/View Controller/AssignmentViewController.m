@@ -69,8 +69,6 @@
     [self.assignmentTableView setDelegate:self];
     [self.assignmentTableView setDataSource:self];
     
-    [self.assignmentTableView reloadData];
-    
     self.view = self.assignmentTableView;
 }
 

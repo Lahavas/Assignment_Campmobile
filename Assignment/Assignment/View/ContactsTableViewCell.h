@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *cellIdentifier = @"ContactsTableViewCell";
+
 @interface ContactsTableViewCell : UITableViewCell
 
 #pragma mark - Public Properties
