@@ -16,17 +16,45 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        [self setProfileImage];
+        UIImage *profileDefaultImage = [UIImage imageNamed:@"defaultImage"];
         
-        [self setFirstName];
-        [self setLastName];
+        self.profileImageView = [[UIImageView alloc] initWithImage:profileDefaultImage];
+        self.firstNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.lastNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.phoneTypeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.phoneNumberLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        [self setPhoneType];
-        [self setPhoneNumber];
+        [self.firstNameLabel setNumberOfLines:1];
+        [self.firstNameLabel setTextColor:UIColor.blackColor];
+        [self.firstNameLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.firstNameLabel setFont:[UIFont systemFontOfSize:15.0]];
+        
+        [self.lastNameLabel setNumberOfLines:1];
+        [self.lastNameLabel setTextColor:UIColor.blackColor];
+        [self.lastNameLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.lastNameLabel setFont:[UIFont systemFontOfSize:15.0]];
+        
+        [self.phoneTypeLabel setNumberOfLines:1];
+        [self.phoneTypeLabel setTextColor:UIColor.blackColor];
+        [self.phoneTypeLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.phoneTypeLabel setFont:[UIFont systemFontOfSize:15.0]];
+        
+        [self.phoneNumberLabel setNumberOfLines:1];
+        [self.phoneNumberLabel setTextColor:UIColor.blackColor];
+        [self.phoneNumberLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.phoneNumberLabel setFont:[UIFont systemFontOfSize:15.0]];
+        
+        [self.contentView addSubview:self.profileImageView];
+        [self.contentView addSubview:self.firstNameLabel];
+        [self.contentView addSubview:self.lastNameLabel];
+        [self.contentView addSubview:self.phoneTypeLabel];
+        [self.contentView addSubview:self.phoneNumberLabel];
     }
     
     return self;
 }
+
+#pragma mark - Layout Methods
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -48,11 +76,12 @@
     CGFloat phoneTypeSizeWidth = [self.phoneTypeLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneTypeLabel.font}].width;
     CGFloat phoneTypeSizeHeight = [self.phoneTypeLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneTypeLabel.font}].height;
 
-    CGFloat phoneNumberOriginX = phoneTypeOriginX + phoneTypeSizeWidth + 15.0;
-    CGFloat phoneNumberOriginY = self.profileImageView.frame.origin.y + self.profileImageView.frame.size.height + 15.0;
-    CGFloat phoneNumberSizeWidth = self.contentView.frame.size.width - phoneNumberOriginX - 15.0;
+    CGFloat phoneNumberOriginX = phoneTypeOriginX + phoneTypeSizeWidth + marginValue;
+    CGFloat phoneNumberOriginY = self.profileImageView.frame.origin.y + self.profileImageView.frame.size.height + marginValue;
+    CGFloat phoneNumberSizeWidth = self.contentView.frame.size.width - phoneNumberOriginX - marginValue;
     CGFloat phoneNumberSizeHeight = [self.phoneNumberLabel.text sizeWithAttributes:@{NSFontAttributeName:self.phoneNumberLabel.font}].height;
     
+    [self.profileImageView setFrame:CGRectMake(15, 15, 75, 75)];
     [self.firstNameLabel setFrame:CGRectMake(firstNameOriginX, firstNameOriginY, firstNameSizeWidth, firstNameSizeHeight)];
     [self.lastNameLabel setFrame:CGRectMake(lastNameOriginX, lastNameOriginY, lastNameSizeWidth, lastNameSizeHeight)];
     [self.phoneTypeLabel setFrame:CGRectMake(phoneTypeOriginX, phoneTypeOriginY, phoneTypeSizeWidth, phoneTypeSizeHeight)];
@@ -61,63 +90,6 @@
     [self.profileImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
                                                UIViewAutoresizingFlexibleHeight |
                                                UIViewAutoresizingFlexibleRightMargin];
-}
-
-#pragma mark - Private Methods
-
-- (void)setProfileImage {
-    UIImage *profileDefaultImage = [UIImage imageNamed:@"defaultImage"];
-    
-    self.profileImageView = [[UIImageView alloc] init];
-    
-    [self.profileImageView setImage:profileDefaultImage];
-    [self.profileImageView setFrame:CGRectMake(15, 15, 75, 75)];
-    
-    [self.contentView addSubview:self.profileImageView];
-}
-
-- (void)setFirstName {
-    self.firstNameLabel = [[UILabel alloc] init];
-    
-    [self.firstNameLabel setNumberOfLines:1];
-    [self.firstNameLabel setTextColor:UIColor.blackColor];
-    [self.firstNameLabel setTextAlignment:NSTextAlignmentLeft];
-    [self.firstNameLabel setFont:[UIFont systemFontOfSize:15.0]];
-    
-    [self.contentView addSubview:self.firstNameLabel];
-}
-
-- (void)setLastName {
-    self.lastNameLabel = [[UILabel alloc] init];
-    
-    [self.lastNameLabel setNumberOfLines:1];
-    [self.lastNameLabel setTextColor:UIColor.blackColor];
-    [self.lastNameLabel setTextAlignment:NSTextAlignmentLeft];
-    [self.lastNameLabel setFont:[UIFont systemFontOfSize:15.0]];
-    
-    [self.contentView addSubview:self.lastNameLabel];
-}
-
-- (void)setPhoneType {
-    self.phoneTypeLabel = [[UILabel alloc] init];
-    
-    [self.phoneTypeLabel setNumberOfLines:1];
-    [self.phoneTypeLabel setTextColor:UIColor.blackColor];
-    [self.phoneTypeLabel setTextAlignment:NSTextAlignmentLeft];
-    [self.phoneTypeLabel setFont:[UIFont systemFontOfSize:15.0]];
-    
-    [self.contentView addSubview:self.phoneTypeLabel];
-}
-
-- (void)setPhoneNumber {
-    self.phoneNumberLabel = [[UILabel alloc] init];
-    
-    [self.phoneNumberLabel setNumberOfLines:1];
-    [self.phoneNumberLabel setTextColor:UIColor.blackColor];
-    [self.phoneNumberLabel setTextAlignment:NSTextAlignmentLeft];
-    [self.phoneNumberLabel setFont:[UIFont systemFontOfSize:15.0]];
-    
-    [self.contentView addSubview:self.phoneNumberLabel];
 }
 
 @end
