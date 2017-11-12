@@ -12,10 +12,11 @@
 @implementation AssignmentManager
 
 + (NSArray *)firstWeekAssignment {
-    Assignment *assignmentContactsResizing = [[Assignment alloc] initWithTitle:@"Contacts Resizing" andType:AssignmentContactsResizing];
+    Assignment *assignmentContacts = [[Assignment alloc] initWithTitle:@"Contacts" andType:AssignmentContacts];
     Assignment *assignmentPages = [[Assignment alloc] initWithTitle:@"Pages" andType:AssignmentPages];
+    Assignment *assignmentContactsResizing = [[Assignment alloc] initWithTitle:@"Contacts Resizing" andType:AssignmentContactsResizing];
     
-    return @[assignmentPages, assignmentContactsResizing];
+    return @[assignmentContacts, assignmentPages, assignmentContactsResizing];
 }
 
 + (NSArray *)secondWeekAssignment {

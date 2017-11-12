@@ -11,8 +11,9 @@
 #import "Assignment.h"
 #import "AssignmentManager.h"
 
-#import "ContactsResizingViewController.h"
+#import "ContactsViewController.h"
 #import "PageContainerViewController.h"
+#import "ContactsResizingViewController.h"
 
 #import "AutoResizingTestViewController.h"
 #import "SimpleAnimationViewController.h"
@@ -65,12 +66,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.assignmentTableView = [[UITableView alloc] init];
+    self.assignmentTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     [self.assignmentTableView setDelegate:self];
     [self.assignmentTableView setDataSource:self];
     
-    self.view = self.assignmentTableView;
+    [self.assignmentTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    
+    [self.view addSubview:self.assignmentTableView];
 }
 
 #pragma mark - Memory Management
@@ -82,14 +85,18 @@
 #pragma mark - Private Methods
 
 - (void)executeAssignment:(AssignmentType)type {
-    if (type == AssignmentContactsResizing) {
-        ContactsResizingViewController *contactsResizingViewController = [[ContactsResizingViewController alloc] init];
+    if (type == AssignmentContacts) {
+        ContactsViewController *contactsViewController = [[ContactsViewController alloc] init];
         
-        [self.navigationController pushViewController:contactsResizingViewController animated:YES];
+        [self.navigationController pushViewController:contactsViewController animated:YES];
     } else if (type == AssignmentPages) {
         PageContainerViewController *pageContainerViewController = [[PageContainerViewController alloc] init];
         
         [self.navigationController pushViewController:pageContainerViewController animated:YES];
+    } else if (type == AssignmentContactsResizing) {
+        ContactsResizingViewController *contactsResizingViewController = [[ContactsResizingViewController alloc] init];
+        
+        [self.navigationController pushViewController:contactsResizingViewController animated:YES];
     } else if (type == AssignmentAutoResizing) {
         AutoResizingTestViewController *autoResizingTestViewController = [[AutoResizingTestViewController alloc] init];
         

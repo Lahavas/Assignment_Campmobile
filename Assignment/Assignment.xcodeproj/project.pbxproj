@@ -11,6 +11,12 @@
 		7A06F8991FB8AA8E00BC9837 /* PageContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8981FB8AA8E00BC9837 /* PageContainerViewController.m */; };
 		7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */; };
 		7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F89E1FB8BEB400BC9837 /* ContactsResizingViewController.m */; };
+		7A06F8A31FB8C11700BC9837 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8A11FB8C11700BC9837 /* ContactsViewController.m */; };
+		7A06F8A81FB8C1BB00BC9837 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8A61FB8C1BB00BC9837 /* ContactsTableViewCell.m */; };
+		7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A06F8A71FB8C1BB00BC9837 /* ContactsTableViewCell.xib */; };
+		7A06F8B21FB8C35000BC9837 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8B01FB8C35000BC9837 /* ContactDetailViewController.m */; };
+		7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A06F8B11FB8C35000BC9837 /* ContactDetailViewController.xib */; };
+		7A06F8BA1FB8D3AC00BC9837 /* ContactProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8B91FB8D3AC00BC9837 /* ContactProfileView.m */; };
 		7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2572DA1FB200CD005F4E87 /* PageChildViewController.m */; };
 		7A2572E31FB23057005F4E87 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2572E21FB23057005F4E87 /* Contact.m */; };
 		7A8065B21FB158AE00CEAF02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8065B11FB158AE00CEAF02 /* AppDelegate.m */; };
@@ -56,6 +62,16 @@
 		7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsResizingTableViewCell.m; sourceTree = "<group>"; };
 		7A06F89D1FB8BEB400BC9837 /* ContactsResizingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsResizingViewController.h; sourceTree = "<group>"; };
 		7A06F89E1FB8BEB400BC9837 /* ContactsResizingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsResizingViewController.m; sourceTree = "<group>"; };
+		7A06F8A01FB8C11700BC9837 /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		7A06F8A11FB8C11700BC9837 /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		7A06F8A51FB8C1BB00BC9837 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
+		7A06F8A61FB8C1BB00BC9837 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
+		7A06F8A71FB8C1BB00BC9837 /* ContactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTableViewCell.xib; sourceTree = "<group>"; };
+		7A06F8AF1FB8C35000BC9837 /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		7A06F8B01FB8C35000BC9837 /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		7A06F8B11FB8C35000BC9837 /* ContactDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailViewController.xib; sourceTree = "<group>"; };
+		7A06F8B81FB8D3AC00BC9837 /* ContactProfileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactProfileView.h; sourceTree = "<group>"; };
+		7A06F8B91FB8D3AC00BC9837 /* ContactProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactProfileView.m; sourceTree = "<group>"; };
 		7A2572D91FB200CD005F4E87 /* PageChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageChildViewController.h; sourceTree = "<group>"; };
 		7A2572DA1FB200CD005F4E87 /* PageChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageChildViewController.m; sourceTree = "<group>"; };
 		7A2572E11FB23057005F4E87 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
@@ -116,9 +132,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A06F8B51FB8CC8D00BC9837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A2572DC1FB2260C005F4E87 /* First Week */ = {
 			isa = PBXGroup;
 			children = (
+				7A06F8A01FB8C11700BC9837 /* ContactsViewController.h */,
+				7A06F8A11FB8C11700BC9837 /* ContactsViewController.m */,
+				7A06F8AF1FB8C35000BC9837 /* ContactDetailViewController.h */,
+				7A06F8B01FB8C35000BC9837 /* ContactDetailViewController.m */,
+				7A06F8B11FB8C35000BC9837 /* ContactDetailViewController.xib */,
 				7A06F8971FB8AA8E00BC9837 /* PageContainerViewController.h */,
 				7A06F8981FB8AA8E00BC9837 /* PageContainerViewController.m */,
 				7A2572D91FB200CD005F4E87 /* PageChildViewController.h */,
@@ -155,6 +183,7 @@
 				7A8065C81FB158AE00CEAF02 /* AssignmentTests */,
 				7A8065D31FB158AE00CEAF02 /* AssignmentUITests */,
 				7A8065AE1FB158AE00CEAF02 /* Products */,
+				7A06F8B51FB8CC8D00BC9837 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,8 +274,13 @@
 		7A8066041FB1664C00CEAF02 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A06F8A51FB8C1BB00BC9837 /* ContactsTableViewCell.h */,
+				7A06F8A61FB8C1BB00BC9837 /* ContactsTableViewCell.m */,
+				7A06F8A71FB8C1BB00BC9837 /* ContactsTableViewCell.xib */,
 				7A06F89A1FB8BE6500BC9837 /* ContactsResizingTableViewCell.h */,
 				7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */,
+				7A06F8B81FB8D3AC00BC9837 /* ContactProfileView.h */,
+				7A06F8B91FB8D3AC00BC9837 /* ContactProfileView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +353,14 @@
 					7A8065AC1FB158AE00CEAF02 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					7A8065C41FB158AE00CEAF02 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -361,6 +403,8 @@
 				CE8095291FB29EFB00079E17 /* SimpleAnimationViewController.xib in Resources */,
 				7A8065BA1FB158AE00CEAF02 /* Assets.xcassets in Resources */,
 				CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */,
+				7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */,
+				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */,
+				7A06F8A31FB8C11700BC9837 /* ContactsViewController.m in Sources */,
 				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
 				CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */,
+				7A06F8A81FB8C1BB00BC9837 /* ContactsTableViewCell.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
 				7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */,
@@ -395,8 +441,10 @@
 				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,
 				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
+				7A06F8B21FB8C35000BC9837 /* ContactDetailViewController.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,
+				7A06F8BA1FB8D3AC00BC9837 /* ContactProfileView.m in Sources */,
 				7A8065B21FB158AE00CEAF02 /* AppDelegate.m in Sources */,
 				7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */,
 				7A06F8961FB8A2FF00BC9837 /* ContactsEditingViewController.m in Sources */,
