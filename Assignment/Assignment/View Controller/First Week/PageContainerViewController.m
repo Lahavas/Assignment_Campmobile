@@ -36,7 +36,23 @@
                                        animated:YES
                                      completion:nil];
     
-    [self.pageViewController.view setFrame:self.view.frame];
+    CGRect rootViewFrame = self.view.frame;
+    CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    
+    CGFloat pageViewOriginX = CGRectGetMinX(rootViewFrame);
+    CGFloat pageViewOriginY = CGRectGetHeight(navigationBarFrame);
+    CGFloat pageViewSizeWidth = CGRectGetWidth(rootViewFrame);
+    CGFloat pageViewSizeHeight = CGRectGetHeight(rootViewFrame) - pageViewOriginY - CGRectGetHeight(tabBarFrame);
+    
+    [self.pageViewController.view setFrame:CGRectMake(pageViewOriginX, pageViewOriginY, pageViewSizeWidth, pageViewSizeHeight)];
+    
+    [self.pageViewController.view setAutoresizingMask:
+     UIViewAutoresizingFlexibleWidth |
+     UIViewAutoresizingFlexibleHeight |
+     UIViewAutoresizingFlexibleTopMargin |
+     UIViewAutoresizingFlexibleBottomMargin
+     ];
     
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
