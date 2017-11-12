@@ -1,17 +1,17 @@
 //
-//  ContactsViewController.m
+//  ContactsResizingViewController.m
 //  Assignment
 //
-//  Created by Jaeho on 2017. 11. 7..
+//  Created by Jaeho on 2017. 11. 13..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "ContactsViewController.h"
+#import "ContactsResizingViewController.h"
 
 #import "Contact.h"
-#import "ContactsTableViewCell.h"
+#import "ContactsResizingTableViewCell.h"
 
-@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ContactsResizingViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *contactsTableView;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ContactsViewController
+@implementation ContactsResizingViewController
 
 #pragma mark - View Life Cycle
 
@@ -28,12 +28,12 @@
     
     self.contactsTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     [self.contactsTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
-                                                UIViewAutoresizingFlexibleHeight];
+     UIViewAutoresizingFlexibleHeight];
     
     [self.contactsTableView setDelegate:self];
     [self.contactsTableView setDataSource:self];
     
-    [self.contactsTableView registerClass:ContactsTableViewCell.self forCellReuseIdentifier:cellIdentifier];
+    [self.contactsTableView registerClass:ContactsResizingTableViewCell.self forCellReuseIdentifier:contactResizingCellIdentifier];
     
     self.contactArray = @[[[Contact alloc] initWithFirstName:@"One" andLastName:@"Firstasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfasdfasdfasdfasdfasdfasdfasdf" andPhoneType:@"집" andPhoneNumber:@"010-1111-1111"],
                           [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
@@ -84,16 +84,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    ContactsTableViewCell *contactsTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    ContactsResizingTableViewCell *contactsResizingTableViewCell = [tableView dequeueReusableCellWithIdentifier:contactResizingCellIdentifier forIndexPath:indexPath];
     
     Contact *contact = [self.contactArray objectAtIndex:indexPath.row];
     
-    [contactsTableViewCell.firstNameLabel setText:contact.firstName];
-    [contactsTableViewCell.lastNameLabel setText:contact.lastName];
-    [contactsTableViewCell.phoneTypeLabel setText:contact.phoneType];
-    [contactsTableViewCell.phoneNumberLabel setText:contact.phoneNumber];
+    [contactsResizingTableViewCell.firstNameLabel setText:contact.firstName];
+    [contactsResizingTableViewCell.lastNameLabel setText:contact.lastName];
+    [contactsResizingTableViewCell.phoneTypeLabel setText:contact.phoneType];
+    [contactsResizingTableViewCell.phoneNumberLabel setText:contact.phoneNumber];
     
-    return contactsTableViewCell;
+    return contactsResizingTableViewCell;
 }
 
 #pragma mark - Table View Delegate

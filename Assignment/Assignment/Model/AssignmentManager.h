@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger, AssignmentType) {
     AssignmentDefault,
-    AssignmentContacts,
+    AssignmentContactsResizing,
     AssignmentPages,
     AssignmentAutoResizing,
     AssignmentSimpleAnimation,

@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		7A06F8961FB8A2FF00BC9837 /* ContactsEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8951FB8A2FF00BC9837 /* ContactsEditingViewController.m */; };
 		7A06F8991FB8AA8E00BC9837 /* PageContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F8981FB8AA8E00BC9837 /* PageContainerViewController.m */; };
+		7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */; };
+		7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06F89E1FB8BEB400BC9837 /* ContactsResizingViewController.m */; };
 		7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2572DA1FB200CD005F4E87 /* PageChildViewController.m */; };
 		7A2572E31FB23057005F4E87 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2572E21FB23057005F4E87 /* Contact.m */; };
-		7A2572E71FB231FF005F4E87 /* ContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2572E51FB231FF005F4E87 /* ContactsTableViewCell.m */; };
 		7A8065B21FB158AE00CEAF02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8065B11FB158AE00CEAF02 /* AppDelegate.m */; };
 		7A8065BA1FB158AE00CEAF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8065B91FB158AE00CEAF02 /* Assets.xcassets */; };
 		7A8065C01FB158AE00CEAF02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8065BF1FB158AE00CEAF02 /* main.m */; };
@@ -21,7 +22,6 @@
 		7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660B1FB1826C00CEAF02 /* Assignment.m */; };
 		7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */; };
 		7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A867E081FB50F4800603CCE /* StandardCellViewController.m */; };
-		7A9359421FB1B7D800618360 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9359401FB1B7D800618360 /* ContactsViewController.m */; };
 		7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */; };
 		CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE715FF81FB447700004E3F6 /* AutoResizingTestViewController.m */; };
 		CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8095261FB29EFB00079E17 /* SimpleAnimationViewController.m */; };
@@ -52,12 +52,14 @@
 		7A06F8951FB8A2FF00BC9837 /* ContactsEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsEditingViewController.m; sourceTree = "<group>"; };
 		7A06F8971FB8AA8E00BC9837 /* PageContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageContainerViewController.h; sourceTree = "<group>"; };
 		7A06F8981FB8AA8E00BC9837 /* PageContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageContainerViewController.m; sourceTree = "<group>"; };
+		7A06F89A1FB8BE6500BC9837 /* ContactsResizingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsResizingTableViewCell.h; sourceTree = "<group>"; };
+		7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsResizingTableViewCell.m; sourceTree = "<group>"; };
+		7A06F89D1FB8BEB400BC9837 /* ContactsResizingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsResizingViewController.h; sourceTree = "<group>"; };
+		7A06F89E1FB8BEB400BC9837 /* ContactsResizingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsResizingViewController.m; sourceTree = "<group>"; };
 		7A2572D91FB200CD005F4E87 /* PageChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageChildViewController.h; sourceTree = "<group>"; };
 		7A2572DA1FB200CD005F4E87 /* PageChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageChildViewController.m; sourceTree = "<group>"; };
 		7A2572E11FB23057005F4E87 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		7A2572E21FB23057005F4E87 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		7A2572E41FB231FF005F4E87 /* ContactsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewCell.h; sourceTree = "<group>"; };
-		7A2572E51FB231FF005F4E87 /* ContactsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewCell.m; sourceTree = "<group>"; };
 		7A8065AD1FB158AE00CEAF02 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8065B01FB158AE00CEAF02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A8065B11FB158AE00CEAF02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignmentManager.m; sourceTree = "<group>"; };
 		7A867E071FB50F4800603CCE /* StandardCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardCellViewController.h; sourceTree = "<group>"; };
 		7A867E081FB50F4800603CCE /* StandardCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardCellViewController.m; sourceTree = "<group>"; };
-		7A93593F1FB1B7D800618360 /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
-		7A9359401FB1B7D800618360 /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE715FF71FB447700004E3F6 /* AutoResizingTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoResizingTestViewController.h; sourceTree = "<group>"; };
 		CE715FF81FB447700004E3F6 /* AutoResizingTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoResizingTestViewController.m; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 				7A06F8981FB8AA8E00BC9837 /* PageContainerViewController.m */,
 				7A2572D91FB200CD005F4E87 /* PageChildViewController.h */,
 				7A2572DA1FB200CD005F4E87 /* PageChildViewController.m */,
-				7A93593F1FB1B7D800618360 /* ContactsViewController.h */,
-				7A9359401FB1B7D800618360 /* ContactsViewController.m */,
+				7A06F89D1FB8BEB400BC9837 /* ContactsResizingViewController.h */,
+				7A06F89E1FB8BEB400BC9837 /* ContactsResizingViewController.m */,
 			);
 			path = "First Week";
 			sourceTree = "<group>";
@@ -245,8 +245,8 @@
 		7A8066041FB1664C00CEAF02 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7A2572E41FB231FF005F4E87 /* ContactsTableViewCell.h */,
-				7A2572E51FB231FF005F4E87 /* ContactsTableViewCell.m */,
+				7A06F89A1FB8BE6500BC9837 /* ContactsResizingTableViewCell.h */,
+				7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,13 +386,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */,
-				7A2572E71FB231FF005F4E87 /* ContactsTableViewCell.m in Sources */,
 				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
-				7A9359421FB1B7D800618360 /* ContactsViewController.m in Sources */,
 				CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
+				7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */,
 				7A06F8991FB8AA8E00BC9837 /* PageContainerViewController.m in Sources */,
+				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,
 				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,

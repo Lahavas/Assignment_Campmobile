@@ -11,7 +11,7 @@
 #import "Assignment.h"
 #import "AssignmentManager.h"
 
-#import "ContactsViewController.h"
+#import "ContactsResizingViewController.h"
 #import "PageContainerViewController.h"
 
 #import "AutoResizingTestViewController.h"
@@ -82,10 +82,10 @@
 #pragma mark - Private Methods
 
 - (void)executeAssignment:(AssignmentType)type {
-    if (type == AssignmentContacts) {
-        ContactsViewController *contactsViewController = [[ContactsViewController alloc] init];
+    if (type == AssignmentContactsResizing) {
+        ContactsResizingViewController *contactsResizingViewController = [[ContactsResizingViewController alloc] init];
         
-        [self.navigationController pushViewController:contactsViewController animated:YES];
+        [self.navigationController pushViewController:contactsResizingViewController animated:YES];
     } else if (type == AssignmentPages) {
         PageContainerViewController *pageContainerViewController = [[PageContainerViewController alloc] init];
         

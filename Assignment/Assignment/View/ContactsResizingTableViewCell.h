@@ -1,16 +1,16 @@
 //
-//  ContactsTableViewCell.h
+//  ContactsResizingTableViewCell.h
 //  Assignment
 //
-//  Created by Jaeho on 2017. 11. 8..
+//  Created by Jaeho on 2017. 11. 13..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-static NSString *cellIdentifier = @"ContactsTableViewCell";
+static NSString *contactResizingCellIdentifier = @"ContactsResizingTableViewCell";
 
-@interface ContactsTableViewCell : UITableViewCell
+@interface ContactsResizingTableViewCell : UITableViewCell
 
 #pragma mark - Public Properties
 
@@ -21,5 +21,6 @@ static NSString *cellIdentifier = @"ContactsTableViewCell";
 
 @property (strong, nonatomic) UILabel *phoneTypeLabel;
 @property (strong, nonatomic) UILabel *phoneNumberLabel;
+
 
 @end

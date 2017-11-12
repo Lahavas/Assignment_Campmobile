@@ -142,8 +142,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"tableView:cellForRowAtIndexPath: called");
     
-    static NSString *cellIdentifier = @"contactCell";
-    UITableViewCell *contactCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    static NSString *contectCellIdentifier = @"contactCell";
+    UITableViewCell *contactCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:contectCellIdentifier];
     
     if (indexPath.row < self.contactList.count) {
         Contact *contact = self.contactList[indexPath.row];
