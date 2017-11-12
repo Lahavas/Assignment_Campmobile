@@ -38,19 +38,23 @@
     [firstView setBounds:CGRectMake(0, 0, 50, 50)];
     [secondView setCenter:CGPointMake(55, 200)];
     
-    [firstView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin |
+    [firstView setAutoresizingMask:
+     UIViewAutoresizingFlexibleTopMargin |
      UIViewAutoresizingFlexibleLeftMargin |
      UIViewAutoresizingFlexibleRightMargin |
      UIViewAutoresizingFlexibleBottomMargin |
      UIViewAutoresizingFlexibleWidth |
-     UIViewAutoresizingFlexibleHeight];
+     UIViewAutoresizingFlexibleHeight
+     ];
     
-    [secondView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin |
+    [secondView setAutoresizingMask:
+     UIViewAutoresizingFlexibleTopMargin |
      UIViewAutoresizingFlexibleLeftMargin |
      UIViewAutoresizingFlexibleRightMargin |
      UIViewAutoresizingFlexibleBottomMargin |
      UIViewAutoresizingFlexibleWidth |
-     UIViewAutoresizingFlexibleHeight];
+     UIViewAutoresizingFlexibleHeight
+     ];
     
     [self.view addSubview:firstView];
     [self.view addSubview:secondView];
