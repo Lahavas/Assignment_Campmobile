@@ -12,12 +12,13 @@
 #import "AssignmentManager.h"
 
 #import "ContactsViewController.h"
-#import "PageViewController.h"
+#import "PageContainerViewController.h"
 
 #import "AutoResizingTestViewController.h"
 #import "SimpleAnimationViewController.h"
 #import "SpringAnimationViewController.h"
 #import "StandardCellViewController.h"
+#import "ContactsEditingViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -86,9 +87,9 @@
         
         [self.navigationController pushViewController:contactsViewController animated:YES];
     } else if (type == AssignmentPages) {
-        PageViewController *pageViewController = [[PageViewController alloc] init];
+        PageContainerViewController *pageContainerViewController = [[PageContainerViewController alloc] init];
         
-        [self.navigationController pushViewController:pageViewController animated:YES];
+        [self.navigationController pushViewController:pageContainerViewController animated:YES];
     } else if (type == AssignmentAutoResizing) {
         AutoResizingTestViewController *autoResizingTestViewController = [[AutoResizingTestViewController alloc] init];
         
@@ -105,6 +106,10 @@
         StandardCellViewController *standardCellViewController = [[StandardCellViewController alloc] init];
         
         [self.navigationController pushViewController:standardCellViewController animated:YES];
+    } else if (type == AssignmentContactsEditing) {
+        ContactsEditingViewController *contactsEditingViewController = [[ContactsEditingViewController alloc] init];
+        
+        [self.navigationController pushViewController:contactsEditingViewController animated:YES];
     }
 }
 

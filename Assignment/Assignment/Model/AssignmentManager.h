@@ -15,7 +15,8 @@ typedef NS_ENUM(NSInteger, AssignmentType) {
     AssignmentAutoResizing,
     AssignmentSimpleAnimation,
     AssignmentSpringAnimation,
-    AssignmentStandardCell
+    AssignmentStandardCell,
+    AssignmentContactsEditing
 };
 
 @interface AssignmentManager : NSObject

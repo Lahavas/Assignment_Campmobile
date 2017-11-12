@@ -1,25 +1,22 @@
 //
-//  PageViewController.m
+//  PageContainerViewController.m
 //  Assignment
 //
-//  Created by Jaeho on 2017. 11. 7..
+//  Created by Jaeho on 2017. 11. 13..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "PageViewController.h"
+#import "PageContainerViewController.h"
+
 #import "PageChildViewController.h"
 
-@interface PageViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
-
-#pragma mark - Properties
+@interface PageContainerViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
 
-#pragma mark -
-
-@implementation PageViewController
+@implementation PageContainerViewController
 
 #pragma mark - View Life Cycle
 
@@ -33,24 +30,17 @@
     [self.pageViewController setDelegate:self];
     [self.pageViewController setDataSource:self];
     
-    PageChildViewController *initialViewController = [self viewControllerAtIndex:1];
-    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
-    [self.pageViewController setViewControllers:viewControllers
+    PageChildViewController *pageInitialViewController = [[PageChildViewController alloc] init];
+    [self.pageViewController setViewControllers:@[pageInitialViewController]
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:YES
                                      completion:nil];
     
+    [self.pageViewController.view setFrame:self.view.frame];
+    
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.view setBackgroundColor:UIColor.whiteColor];
-    
-    [self.pageViewController.view setFrame:self.view.frame];
 }
 
 #pragma mark - Memory Management
@@ -60,40 +50,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Private Methods
-
-- (PageChildViewController *)viewControllerAtIndex:(NSInteger)index {
-    
-    PageChildViewController *pageChildViewController = [[PageChildViewController alloc] init];
-    [pageChildViewController setIndex:index];
-    
-    return pageChildViewController;
-}
-
 #pragma mark - Page View Controller Data Source
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSInteger index = [(PageChildViewController *)viewController index];
+    NSInteger index = ((PageChildViewController *)viewController).index;
     
-    if (index == 1) {
+    if (index == 0) {
         return nil;
     }
     
     index--;
     
-    return [self viewControllerAtIndex:index];
+    return [[PageChildViewController alloc] initWithIndex:index];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSInteger index = [(PageChildViewController *)viewController index];
+    NSInteger index = ((PageChildViewController *)viewController).index;
     
     index++;
     
-    if (index == 6) {
+    if (index == 5) {
         return nil;
     }
     
-    return [self viewControllerAtIndex:index];
+    return [[PageChildViewController alloc] initWithIndex:index];
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
@@ -101,7 +81,7 @@
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    return 1;
+    return 0;
 }
 
 @end

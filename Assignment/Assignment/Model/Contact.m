@@ -16,6 +16,10 @@
     return [self initWithFirstName:@"firstName" andLastName:@"lastName" andPhoneType:@"phoneType" andPhoneNumber:@"phoneNumber"];
 }
 
+- (instancetype)initWithFirstName:(NSString *)firstName andPhoneNumber:(NSString *)phoneNumber {
+    return [self initWithFirstName:firstName andLastName:@"lastName" andPhoneType:@"phoneType" andPhoneNumber:phoneNumber];
+}
+
 - (instancetype)initWithFirstName:(NSString *)firstName andLastName:(NSString *)lastName andPhoneType:(NSString *)phoneType andPhoneNumber:(NSString *)phoneNumber {
     self = [super init];
     

@@ -21,6 +21,22 @@
 
 @implementation PageChildViewController
 
+#pragma mark - Initialization
+
+- (instancetype)init {
+    return [self initWithIndex:0];
+}
+
+- (instancetype)initWithIndex:(NSInteger)index {
+    self = [super init];
+    
+    if (self) {
+        _index = index;
+    }
+    
+    return self;
+}
+
 #pragma mark - View Life Cycle
 
 - (void)viewDidLoad {
@@ -41,12 +57,12 @@
 #pragma mark - Private Methods
 
 - (void)setIndexLabel {
-    self.indexLabel = [[UILabel alloc] init];
+    self.indexLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     
     [self.indexLabel setTextAlignment:NSTextAlignmentCenter];
     [self.indexLabel setFont:[UIFont boldSystemFontOfSize:24.0]];
     [self.indexLabel setTextColor:UIColor.whiteColor];
-    [self.indexLabel setText:[NSString stringWithFormat:@"Screen #%ld", self.index]];
+    [self.indexLabel setText:[NSString stringWithFormat:@"Screen #%ld", self.index + 1]];
     
     [self.indexLabel sizeToFit];
     [self.indexLabel setCenter:self.view.center];

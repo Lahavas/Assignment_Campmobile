@@ -10,8 +10,8 @@
 
 @interface PageChildViewController : UIViewController
 
-#pragma mark - Public Properties
-
 @property (assign, nonatomic) NSInteger index;
+
+- (instancetype)initWithIndex:(NSInteger) index;
 
 @end

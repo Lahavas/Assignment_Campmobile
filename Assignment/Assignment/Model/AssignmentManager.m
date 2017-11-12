@@ -23,8 +23,9 @@
     Assignment *assignmentSimpleAnimation = [[Assignment alloc] initWithTitle:@"Simple Animation" andType:AssignmentSimpleAnimation];
     Assignment *assignmentSpringAnimation = [[Assignment alloc] initWithTitle:@"Spring Animation" andType:AssignmentSpringAnimation];
     Assignment *assignmentStandardCell = [[Assignment alloc] initWithTitle:@"Standard Cell" andType:AssignmentStandardCell];
+    Assignment *assignmentContactsEditing = [[Assignment alloc] initWithTitle:@"Contacts Editing" andType:AssignmentContactsEditing];
     
-    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation, assignmentStandardCell];
+    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation, assignmentStandardCell, assignmentContactsEditing];
 }
 
 + (NSArray *)thirdWeekAssignment {

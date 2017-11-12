@@ -21,6 +21,7 @@
 #pragma mark - Initializer
 
 - (instancetype)init;
+- (instancetype)initWithFirstName:(NSString *)firstName andPhoneNumber:(NSString *)phoneNumber;
 - (instancetype)initWithFirstName:(NSString *)firstName andLastName:(NSString *)lastName andPhoneType:(NSString *)phoneType andPhoneNumber:(NSString *)phoneNumber;
 
 @end
