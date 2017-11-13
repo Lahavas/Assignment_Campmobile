@@ -8,7 +8,12 @@
 
 #import "ContactDetailViewController.h"
 
+#import "ContactProfileView.h"
+
 @interface ContactDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet ContactProfileView *contactProfileView;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
 @end
 
@@ -18,8 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    NSLog(@"%@", self.contact);
+    
+    [self.contactProfileView.nameLabel setText:[NSString stringWithFormat:@"%@%@", self.contact.familyName, self.contact.givenName]];
+    [self.contactProfileView.organizationLabel setText:self.contact.organizationName];
+    
+    [self.phoneLabel setText:[NSString stringWithFormat:@"전화번호: %@", self.contact.phoneNumbers[0].value.stringValue]];
 }
 
 #pragma mark - Memory Management

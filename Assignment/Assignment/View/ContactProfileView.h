@@ -10,4 +10,10 @@
 
 @interface ContactProfileView : UIView
 
+#pragma mark - Public Properties
+
+@property (strong, nonatomic) UIImageView *profileImageView;
+@property (strong, nonatomic) UILabel *nameLabel;
+@property (strong, nonatomic) UILabel *organizationLabel;
+
 @end
