@@ -34,6 +34,8 @@
 		CE8095291FB29EFB00079E17 /* SimpleAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8095271FB29EFB00079E17 /* SimpleAnimationViewController.xib */; };
 		CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */; };
 		CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */; };
+		CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8D61FBAD12100E6631E /* CustomView.m */; };
+		CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE95F8D81FBAD12B00E6631E /* CustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,9 @@
 		CE80952A1FB2CF7000079E17 /* SpringAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringAnimationViewController.h; sourceTree = "<group>"; };
 		CE80952B1FB2CF7000079E17 /* SpringAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringAnimationViewController.m; sourceTree = "<group>"; };
 		CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpringAnimationViewController.xib; sourceTree = "<group>"; };
+		CE95F8D51FBAD12100E6631E /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		CE95F8D61FBAD12100E6631E /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		CE95F8D81FBAD12B00E6631E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +286,9 @@
 				7A06F89B1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m */,
 				7A06F8B81FB8D3AC00BC9837 /* ContactProfileView.h */,
 				7A06F8B91FB8D3AC00BC9837 /* ContactProfileView.m */,
+				CE95F8D51FBAD12100E6631E /* CustomView.h */,
+				CE95F8D61FBAD12100E6631E /* CustomView.m */,
+				CE95F8D81FBAD12B00E6631E /* CustomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */,
 				7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */,
 				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
+				CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +443,7 @@
 				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
 				CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */,
 				7A06F8A81FB8C1BB00BC9837 /* ContactsTableViewCell.m in Sources */,
+				CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
 				7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */,

@@ -8,11 +8,13 @@
 
 #import "SpringAnimationViewController.h"
 
+#import "CustomView.h"
+
 @interface SpringAnimationViewController ()
 
 @property (assign, nonatomic) CGRect originalFrame;
 
-@property (weak, nonatomic) IBOutlet UIView *targetView;
+@property (weak, nonatomic) IBOutlet CustomView *targetView;
 
 @end
 
@@ -23,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.targetView.textLabel setText:@"Target"];
 }
 
 - (void)viewWillLayoutSubviews {
