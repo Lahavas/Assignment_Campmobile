@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-static NSString *contactResizingCellIdentifier = @"ContactsResizingTableViewCell";
-
 @interface ContactsResizingTableViewCell : UITableViewCell
 
 #pragma mark - Public Properties
@@ -22,5 +20,8 @@ static NSString *contactResizingCellIdentifier = @"ContactsResizingTableViewCell
 @property (strong, nonatomic) UILabel *phoneTypeLabel;
 @property (strong, nonatomic) UILabel *phoneNumberLabel;
 
+#pragma mark - Public Methods
+
++ (NSString *)reuseIdentifier;
 
 @end

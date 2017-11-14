@@ -36,6 +36,7 @@
 		CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */; };
 		CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8D61FBAD12100E6631E /* CustomView.m */; };
 		CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE95F8D81FBAD12B00E6631E /* CustomView.xib */; };
+		CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		CE95F8D51FBAD12100E6631E /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		CE95F8D61FBAD12100E6631E /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		CE95F8D81FBAD12B00E6631E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		CE95F8DD1FBADA0B00E6631E /* SetBoundsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetBoundsTestViewController.h; sourceTree = "<group>"; };
+		CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetBoundsTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				7A867E081FB50F4800603CCE /* StandardCellViewController.m */,
 				7A06F8941FB8A2FF00BC9837 /* ContactsEditingViewController.h */,
 				7A06F8951FB8A2FF00BC9837 /* ContactsEditingViewController.m */,
+				CE95F8DD1FBADA0B00E6631E /* SetBoundsTestViewController.h */,
+				CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */,
 			);
 			path = "Second Week";
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
+				CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */,
 				7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */,
 				7A06F8991FB8AA8E00BC9837 /* PageContainerViewController.m in Sources */,
 				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,

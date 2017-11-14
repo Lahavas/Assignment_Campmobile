@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-static NSString *contactsCellIdentifier = @"ContactsTableViewCell";
-
 @interface ContactsTableViewCell : UITableViewCell
 
 #pragma mark - Public Properties
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+#pragma mark - Public Methods
+
++ (NSString *)reuseIdentifier;
 
 @end

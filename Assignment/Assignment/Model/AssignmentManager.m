@@ -25,8 +25,9 @@
     Assignment *assignmentSpringAnimation = [[Assignment alloc] initWithTitle:@"Spring Animation" andType:AssignmentSpringAnimation];
     Assignment *assignmentStandardCell = [[Assignment alloc] initWithTitle:@"Standard Cell" andType:AssignmentStandardCell];
     Assignment *assignmentContactsEditing = [[Assignment alloc] initWithTitle:@"Contacts Editing" andType:AssignmentContactsEditing];
+    Assignment *assignmentSetBoundsTest = [[Assignment alloc] initWithTitle:@"setBounds Test" andType:AssignmentSetBoundsTest];
     
-    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation, assignmentStandardCell, assignmentContactsEditing];
+    return @[assignmentAutoResizing, assignmentSimpleAnimation, assignmentSpringAnimation, assignmentStandardCell, assignmentContactsEditing, assignmentSetBoundsTest];
 }
 
 + (NSArray *)thirdWeekAssignment {

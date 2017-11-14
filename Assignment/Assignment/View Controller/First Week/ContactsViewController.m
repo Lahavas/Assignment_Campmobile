@@ -33,7 +33,7 @@
     [self.contactsTableView setDelegate:self];
     [self.contactsTableView setDataSource:self];
     
-    [self.contactsTableView registerNib:[UINib nibWithNibName:@"ContactsTableViewCell" bundle:nil] forCellReuseIdentifier:contactsCellIdentifier];
+    [self.contactsTableView registerNib:[UINib nibWithNibName:@"ContactsTableViewCell" bundle:nil] forCellReuseIdentifier:[ContactsTableViewCell reuseIdentifier]];
     
     [self.contactsTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
@@ -73,7 +73,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ContactsTableViewCell *contactsTableViewCell = [tableView dequeueReusableCellWithIdentifier:contactsCellIdentifier forIndexPath:indexPath];
+    ContactsTableViewCell *contactsTableViewCell = [tableView dequeueReusableCellWithIdentifier:[ContactsTableViewCell reuseIdentifier] forIndexPath:indexPath];
     
     CNContact *contact = self.contactList[indexPath.row];
     

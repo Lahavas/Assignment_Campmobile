@@ -20,6 +20,7 @@
 #import "SpringAnimationViewController.h"
 #import "StandardCellViewController.h"
 #import "ContactsEditingViewController.h"
+#import "SetBoundsTestViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -117,6 +118,10 @@
         ContactsEditingViewController *contactsEditingViewController = [[ContactsEditingViewController alloc] init];
         
         [self.navigationController pushViewController:contactsEditingViewController animated:YES];
+    } else if (type == AssignmentSetBoundsTest) {
+        SetBoundsTestViewController *setBoundsTestViewController = [[SetBoundsTestViewController alloc] init];
+        
+        [self.navigationController pushViewController:setBoundsTestViewController animated:YES];
     }
 }
 

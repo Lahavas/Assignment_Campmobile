@@ -33,12 +33,12 @@
     [self.contactsTableView setDelegate:self];
     [self.contactsTableView setDataSource:self];
     
-    [self.contactsTableView registerClass:ContactsResizingTableViewCell.self forCellReuseIdentifier:contactResizingCellIdentifier];
+    [self.contactsTableView registerClass:ContactsResizingTableViewCell.self forCellReuseIdentifier:[ContactsResizingTableViewCell reuseIdentifier]];
     
     self.contactArray = @[[[Contact alloc] initWithFirstName:@"One" andLastName:@"Firstasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfasdfasdfasdfasdfasdfasdfasdf" andPhoneType:@"집" andPhoneNumber:@"010-1111-1111"],
                           [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
-                          [[Contact alloc] initWithFirstName:@"Three" andLastName:@"Third" andPhoneType:@"휴대전화" andPhoneNumber:@"010-3333-3333"],
-                          [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
+                          [[Contact alloc] initWithFirstName:@"Threeasdfasdfasdfasdfasdfasdfasdfsadf" andLastName:@"Third" andPhoneType:@"휴대전화" andPhoneNumber:@"010-3333-3333"],
+                          [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화asdfasdfasdfasdfasdfasdfsdfasdf" andPhoneNumber:@"010-2222-2222"],
                           [[Contact alloc] initWithFirstName:@"Three" andLastName:@"Third" andPhoneType:@"휴대전화" andPhoneNumber:@"010-3333-3333"],
                           [[Contact alloc] initWithFirstName:@"Two" andLastName:@"Second" andPhoneType:@"휴대전화" andPhoneNumber:@"010-2222-2222"],
                           [[Contact alloc] initWithFirstName:@"Three" andLastName:@"Third" andPhoneType:@"휴대전화" andPhoneNumber:@"010-3333-3333"],
@@ -83,8 +83,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    ContactsResizingTableViewCell *contactsResizingTableViewCell = [tableView dequeueReusableCellWithIdentifier:contactResizingCellIdentifier forIndexPath:indexPath];
+    ContactsResizingTableViewCell *contactsResizingTableViewCell = [tableView dequeueReusableCellWithIdentifier:[ContactsResizingTableViewCell reuseIdentifier] forIndexPath:indexPath];
     
     Contact *contact = [self.contactArray objectAtIndex:indexPath.row];
     
