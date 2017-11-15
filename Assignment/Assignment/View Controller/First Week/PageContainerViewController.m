@@ -7,8 +7,10 @@
 //
 
 #import "PageContainerViewController.h"
-
 #import "PageChildViewController.h"
+
+#define PAGE_COUNT 5
+#define PAGE_INIT_INDEX 0
 
 @interface PageContainerViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
@@ -71,7 +73,7 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSInteger index = ((PageChildViewController *)viewController).index;
     
-    if (index == 0) {
+    if (index == PAGE_INIT_INDEX) {
         return nil;
     }
     
@@ -85,7 +87,7 @@
     
     index++;
     
-    if (index == 5) {
+    if (index == PAGE_COUNT) {
         return nil;
     }
     
@@ -93,11 +95,11 @@
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return 5;
+    return PAGE_COUNT;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    return 0;
+    return PAGE_INIT_INDEX;
 }
 
 @end
