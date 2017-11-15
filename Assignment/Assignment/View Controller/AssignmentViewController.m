@@ -23,6 +23,7 @@
 #import "SetBoundsTestViewController.h"
 
 #import "ImageZoomViewController.h"
+#import "NotificationContainerViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -128,6 +129,10 @@
         ImageZoomViewController *imageZoomViewController = [[ImageZoomViewController alloc] init];
         
         [self.navigationController pushViewController:imageZoomViewController animated:YES];
+    } else if (type == AssignmentNotificationContainer) {
+        NotificationContainerViewController *notificationContainerViewController = [[NotificationContainerViewController alloc] init];
+        
+        [self.navigationController pushViewController:notificationContainerViewController animated:YES];
     }
 }
 

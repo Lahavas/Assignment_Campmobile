@@ -12,14 +12,14 @@
 #define MIN_ZOOM_SCALE 0.5
 
 #define DOUBLE_TAP_MAX_ZOOM_SCALE 2.0
-#define DOUBLE_TAP_MIN_ZOOM_SCALE 1.0
+#define DEFAULT_ZOOM_SCALE 1.0
 
 @interface ImageZoomViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-@property (assign, nonatomic, getter=isZoomFromDoubleTap) BOOL zoomFromDoubleTap;
+@property (strong, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
 @end
 
@@ -40,16 +40,20 @@
     
     [self.scrollView setDelegate:self];
     
-    UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    [doubleTapGestureRecognizer setNumberOfTapsRequired:2];
+    self.doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    [self.doubleTapGestureRecognizer setNumberOfTapsRequired:2];
     
-    [self.scrollView addGestureRecognizer:doubleTapGestureRecognizer];
+    [self.scrollView addGestureRecognizer:self.doubleTapGestureRecognizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self initZoomScale];
+    [self.scrollView setZoomScale:DEFAULT_ZOOM_SCALE animated:YES];
+}
+
+- (void)dealloc {
+    [self.scrollView removeGestureRecognizer:self.doubleTapGestureRecognizer];
 }
 
 #pragma mark - Memory Management
@@ -63,19 +67,11 @@
 
 - (void)handleDoubleTap:(UITapGestureRecognizer *)tapGestureRecognizer {
     
-    if ([self isZoomFromDoubleTap]) {
-        [self initZoomScale];
+    if (self.scrollView.zoomScale != 1.0) {
+        [self.scrollView setZoomScale:DEFAULT_ZOOM_SCALE animated:YES];
     } else {
-        [self setZoomFromDoubleTap:YES];
         [self.scrollView setZoomScale:DOUBLE_TAP_MAX_ZOOM_SCALE animated:YES];
     }
-}
-
-#pragma mark - Private Methods
-
-- (void)initZoomScale {
-    [self setZoomFromDoubleTap:NO];
-    [self.scrollView setZoomScale:DOUBLE_TAP_MIN_ZOOM_SCALE animated:YES];
 }
 
 #pragma mark - Scroll View Delegate
@@ -83,10 +79,6 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     
     return self.imageView;
-}
-
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
-    [self setZoomFromDoubleTap:NO];
 }
 
 @end

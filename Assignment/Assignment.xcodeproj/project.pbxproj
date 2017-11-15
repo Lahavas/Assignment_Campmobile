@@ -36,6 +36,8 @@
 		CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */; };
 		CE89DC8E1FBBDA2500CBFAD3 /* ImageZoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE89DC8C1FBBDA2500CBFAD3 /* ImageZoomViewController.m */; };
 		CE89DC8F1FBBDA2500CBFAD3 /* ImageZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE89DC8D1FBBDA2500CBFAD3 /* ImageZoomViewController.xib */; };
+		CE9519131FBC42030007CE92 /* NotificationContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */; };
+		CE9519141FBC42030007CE92 /* NotificationContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */; };
 		CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8D61FBAD12100E6631E /* CustomView.m */; };
 		CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE95F8D81FBAD12B00E6631E /* CustomView.xib */; };
 		CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */; };
@@ -113,6 +115,9 @@
 		CE89DC8B1FBBDA2500CBFAD3 /* ImageZoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomViewController.h; sourceTree = "<group>"; };
 		CE89DC8C1FBBDA2500CBFAD3 /* ImageZoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomViewController.m; sourceTree = "<group>"; };
 		CE89DC8D1FBBDA2500CBFAD3 /* ImageZoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageZoomViewController.xib; sourceTree = "<group>"; };
+		CE9519101FBC42030007CE92 /* NotificationContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationContainerViewController.h; sourceTree = "<group>"; };
+		CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationContainerViewController.m; sourceTree = "<group>"; };
+		CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationContainerViewController.xib; sourceTree = "<group>"; };
 		CE95F8D51FBAD12100E6631E /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		CE95F8D61FBAD12100E6631E /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		CE95F8D81FBAD12B00E6631E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
@@ -310,6 +315,9 @@
 				CE89DC8B1FBBDA2500CBFAD3 /* ImageZoomViewController.h */,
 				CE89DC8C1FBBDA2500CBFAD3 /* ImageZoomViewController.m */,
 				CE89DC8D1FBBDA2500CBFAD3 /* ImageZoomViewController.xib */,
+				CE9519101FBC42030007CE92 /* NotificationContainerViewController.h */,
+				CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */,
+				CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */,
 			);
 			path = "Third Week";
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 				CE89DC8F1FBBDA2500CBFAD3 /* ImageZoomViewController.xib in Resources */,
 				CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */,
 				7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */,
+				CE9519141FBC42030007CE92 /* NotificationContainerViewController.xib in Resources */,
 				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
 				CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */,
 			);
@@ -460,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9519131FBC42030007CE92 /* NotificationContainerViewController.m in Sources */,
 				7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */,
 				7A06F8A31FB8C11700BC9837 /* ContactsViewController.m in Sources */,
 				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
