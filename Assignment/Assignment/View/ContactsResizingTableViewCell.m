@@ -82,7 +82,7 @@
 
         CGFloat phoneTypeOriginX = marginValue;
         CGFloat phoneTypeOriginY = phoneValueOriginY;
-        CGFloat phoneTypeSizeWidth = 50.0;
+        CGFloat phoneTypeSizeWidth = 60.0;
         CGFloat phoneTypeSizeHeight = marginValue;
         
         [self.phoneTypeLabel setFrame:CGRectMake(phoneTypeOriginX, phoneTypeOriginY, phoneTypeSizeWidth, phoneTypeSizeHeight)];
@@ -96,7 +96,6 @@
         
         [self.firstNameLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];        
         [self.lastNameLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-        [self.phoneTypeLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         [self.phoneNumberLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         
         [self.contentView addSubview:self.profileImageView];

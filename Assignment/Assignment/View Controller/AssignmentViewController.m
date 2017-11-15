@@ -22,6 +22,8 @@
 #import "ContactsEditingViewController.h"
 #import "SetBoundsTestViewController.h"
 
+#import "ImageZoomViewController.h"
+
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
 #pragma mark - Properties
@@ -122,6 +124,10 @@
         SetBoundsTestViewController *setBoundsTestViewController = [[SetBoundsTestViewController alloc] init];
         
         [self.navigationController pushViewController:setBoundsTestViewController animated:YES];
+    } else if (type == AssignmentImageZoom) {
+        ImageZoomViewController *imageZoomViewController = [[ImageZoomViewController alloc] init];
+        
+        [self.navigationController pushViewController:imageZoomViewController animated:YES];
     }
 }
 
