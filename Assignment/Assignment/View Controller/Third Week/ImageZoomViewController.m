@@ -8,8 +8,11 @@
 
 #import "ImageZoomViewController.h"
 
-#define MAX_ZOOM_SCALE 2.0
-#define MIN_ZOOM_SCALE 1.0
+#define MAX_ZOOM_SCALE 3.0
+#define MIN_ZOOM_SCALE 0.5
+
+#define DOUBLE_TAP_MAX_ZOOM_SCALE 2.0
+#define DOUBLE_TAP_MIN_ZOOM_SCALE 1.0
 
 @interface ImageZoomViewController () <UIScrollViewDelegate>
 
@@ -32,6 +35,8 @@
     
     [self.scrollView setMaximumZoomScale:MAX_ZOOM_SCALE];
     [self.scrollView setMinimumZoomScale:MIN_ZOOM_SCALE];
+    
+    [self.scrollView setContentSize:self.imageView.frame.size];
     
     [self.scrollView setDelegate:self];
     
@@ -62,7 +67,7 @@
         [self initZoomScale];
     } else {
         [self setZoomFromDoubleTap:YES];
-        [self.scrollView setZoomScale:MAX_ZOOM_SCALE animated:YES];
+        [self.scrollView setZoomScale:DOUBLE_TAP_MAX_ZOOM_SCALE animated:YES];
     }
 }
 
@@ -70,7 +75,7 @@
 
 - (void)initZoomScale {
     [self setZoomFromDoubleTap:NO];
-    [self.scrollView setZoomScale:MIN_ZOOM_SCALE animated:YES];
+    [self.scrollView setZoomScale:DOUBLE_TAP_MIN_ZOOM_SCALE animated:YES];
 }
 
 #pragma mark - Scroll View Delegate
