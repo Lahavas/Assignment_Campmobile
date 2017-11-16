@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) UITableView *contactsTableView;
 
-@property (strong, nonatomic) NSArray *contactList;
+@property (strong, nonatomic) NSMutableArray *contactList;
 
 @end
 
@@ -50,16 +50,25 @@
 #pragma mark - Private Methods
 
 - (void)fetchContactStore {
+    self.contactList = [[NSMutableArray alloc] init];
+    
     CNContactStore *contactStore = [[CNContactStore alloc] init];
     
     NSArray *keyForFetch = @[CNContactGivenNameKey,
                              CNContactFamilyNameKey,
                              CNContactPhoneNumbersKey,
                              CNContactOrganizationNameKey];
-    
     NSPredicate *predicate = [CNContact predicateForContactsInContainerWithIdentifier:[contactStore defaultContainerIdentifier]];
     
-    self.contactList = [contactStore unifiedContactsMatchingPredicate:predicate keysToFetch:keyForFetch error:nil];
+    CNContactFetchRequest *fetchRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:keyForFetch];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setSortOrder:CNContactSortOrderFamilyName];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [contactStore enumerateContactsWithFetchRequest:fetchRequest error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
+        [weakSelf.contactList addObject:contact];
+    }];
 }
 
 #pragma mark - Table View Data Source
