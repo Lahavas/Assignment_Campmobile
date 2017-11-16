@@ -14,10 +14,14 @@
 
 @implementation NotificationContainerViewController
 
+#pragma mark - View Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
+
+#pragma mark - Memory Management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

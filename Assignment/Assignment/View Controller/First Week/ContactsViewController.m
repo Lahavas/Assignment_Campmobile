@@ -66,7 +66,9 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [contactStore enumerateContactsWithFetchRequest:fetchRequest error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
+    [contactStore enumerateContactsWithFetchRequest:fetchRequest
+                                              error:nil
+                                         usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
         [weakSelf.contactList addObject:contact];
     }];
 }
