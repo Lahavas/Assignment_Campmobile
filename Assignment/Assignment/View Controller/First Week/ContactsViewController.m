@@ -11,9 +11,10 @@
 #import "ContactsTableViewCell.h"
 #import "ContactDetailViewController.h"
 
-@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (strong, nonatomic) UITableView *contactsTableView;
+@property (strong, nonatomic) UIButton *floatingButton;
 
 @property (strong, nonatomic) NSMutableArray *contactList;
 
@@ -38,6 +39,30 @@
     [self.contactsTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
     [self.view addSubview:self.contactsTableView];
+    
+    self.floatingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.floatingButton addTarget:self
+                       action:@selector(addContacts)
+             forControlEvents:UIControlEventTouchUpInside];
+    [self.floatingButton setTitle:@"Add" forState:UIControlStateNormal];
+    
+    CGFloat floatingButtonMarginRate = 0.8;
+    CGFloat floatingButtonSize = 65.0;
+    
+    CGFloat floatingButtonOriginX = CGRectGetMaxX(self.view.frame) * floatingButtonMarginRate;
+    CGFloat floatingButtonOriginY = CGRectGetMaxY(self.view.frame) * floatingButtonMarginRate;
+    CGFloat floatingButtonWidth = floatingButtonSize;
+    CGFloat floatingButtonHeight = floatingButtonSize;
+    
+    [self.floatingButton setFrame:CGRectMake(floatingButtonOriginX, floatingButtonOriginY, floatingButtonWidth, floatingButtonHeight)];
+    
+    [self.floatingButton setAutoresizingMask:
+     UIViewAutoresizingFlexibleTopMargin |
+     UIViewAutoresizingFlexibleBottomMargin |
+     UIViewAutoresizingFlexibleRightMargin | 
+     UIViewAutoresizingFlexibleLeftMargin];
+    
+    [self.view addSubview:self.floatingButton];
 }
 
 #pragma mark - Memory Management
@@ -71,6 +96,24 @@
                                          usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
         [weakSelf.contactList addObject:contact];
     }];
+}
+
+- (void)addContacts {
+    
+}
+
+#pragma mark - Scroll View Delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if ([scrollView isEqual:self.contactsTableView]) {
+        [self.floatingButton setHidden:YES];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if ([scrollView isEqual:self.contactsTableView]) {
+        [self.floatingButton setHidden:NO];
+    }
 }
 
 #pragma mark - Table View Data Source
