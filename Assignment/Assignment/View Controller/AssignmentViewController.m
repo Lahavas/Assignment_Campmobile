@@ -24,6 +24,7 @@
 
 #import "ImageZoomViewController.h"
 #import "NotificationContainerViewController.h"
+#import "KeyboardTestViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -133,6 +134,10 @@
         NotificationContainerViewController *notificationContainerViewController = [[NotificationContainerViewController alloc] init];
         
         [self.navigationController pushViewController:notificationContainerViewController animated:YES];
+    } else if (type == AssignmentKeyboardTest) {
+        KeyboardTestViewController *keyboardTestViewController = [[KeyboardTestViewController alloc] init];
+        
+        [self.navigationController pushViewController:keyboardTestViewController animated:YES];
     }
 }
 

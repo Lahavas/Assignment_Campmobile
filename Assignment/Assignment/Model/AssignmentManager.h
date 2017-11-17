@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, AssignmentType) {
     AssignmentContactsEditing,
     AssignmentSetBoundsTest,
     AssignmentImageZoom,
-    AssignmentNotificationContainer
+    AssignmentNotificationContainer,
+    AssignmentKeyboardTest
 };
 
 @interface AssignmentManager : NSObject

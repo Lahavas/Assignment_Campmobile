@@ -29,6 +29,8 @@
 		7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */; };
 		7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A867E081FB50F4800603CCE /* StandardCellViewController.m */; };
 		7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */; };
+		CE35745A1FBE8F36002101DC /* KeyboardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3574581FBE8F36002101DC /* KeyboardTestViewController.m */; };
+		CE35745B1FBE8F36002101DC /* KeyboardTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3574591FBE8F36002101DC /* KeyboardTestViewController.xib */; };
 		CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE715FF81FB447700004E3F6 /* AutoResizingTestViewController.m */; };
 		CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8095261FB29EFB00079E17 /* SimpleAnimationViewController.m */; };
 		CE8095291FB29EFB00079E17 /* SimpleAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8095271FB29EFB00079E17 /* SimpleAnimationViewController.xib */; };
@@ -104,6 +106,9 @@
 		7A867E071FB50F4800603CCE /* StandardCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardCellViewController.h; sourceTree = "<group>"; };
 		7A867E081FB50F4800603CCE /* StandardCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardCellViewController.m; sourceTree = "<group>"; };
 		7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE3574571FBE8F36002101DC /* KeyboardTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardTestViewController.h; sourceTree = "<group>"; };
+		CE3574581FBE8F36002101DC /* KeyboardTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardTestViewController.m; sourceTree = "<group>"; };
+		CE3574591FBE8F36002101DC /* KeyboardTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardTestViewController.xib; sourceTree = "<group>"; };
 		CE715FF71FB447700004E3F6 /* AutoResizingTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoResizingTestViewController.h; sourceTree = "<group>"; };
 		CE715FF81FB447700004E3F6 /* AutoResizingTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoResizingTestViewController.m; sourceTree = "<group>"; };
 		CE8095251FB29EFB00079E17 /* SimpleAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAnimationViewController.h; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 				CE9519101FBC42030007CE92 /* NotificationContainerViewController.h */,
 				CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */,
 				CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */,
+				CE3574571FBE8F36002101DC /* KeyboardTestViewController.h */,
+				CE3574581FBE8F36002101DC /* KeyboardTestViewController.m */,
+				CE3574591FBE8F36002101DC /* KeyboardTestViewController.xib */,
 			);
 			path = "Third Week";
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 				CE9519141FBC42030007CE92 /* NotificationContainerViewController.xib in Resources */,
 				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
 				CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */,
+				CE35745B1FBE8F36002101DC /* KeyboardTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +493,7 @@
 				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,
 				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
+				CE35745A1FBE8F36002101DC /* KeyboardTestViewController.m in Sources */,
 				7A06F8B21FB8C35000BC9837 /* ContactDetailViewController.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,
