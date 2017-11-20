@@ -130,7 +130,7 @@
         ImageZoomViewController *imageZoomViewController = [[ImageZoomViewController alloc] init];
         
         [self.navigationController pushViewController:imageZoomViewController animated:YES];
-    } else if (type == AssignmentNotificationContainer) {
+    } else if (type == AssignmentNotification) {
         NotificationContainerViewController *notificationContainerViewController = [[NotificationContainerViewController alloc] init];
         
         [self.navigationController pushViewController:notificationContainerViewController animated:YES];

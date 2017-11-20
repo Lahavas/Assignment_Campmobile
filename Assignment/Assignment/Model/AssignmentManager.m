@@ -32,15 +32,15 @@
 
 + (NSArray *)thirdWeekAssignment {
     Assignment *assignmentImageZoom = [[Assignment alloc] initWithTitle:@"Image Zoom" andType:AssignmentImageZoom];
-    Assignment *assignmentNotificationContainer = [[Assignment alloc] initWithTitle:@"Notification Container" andType:AssignmentNotificationContainer];
     Assignment *assignmentKeyboardTest = [[Assignment alloc] initWithTitle:@"Keyboard Test" andType:AssignmentKeyboardTest];
     
-    return @[assignmentImageZoom, assignmentNotificationContainer, assignmentKeyboardTest];
+    return @[assignmentImageZoom, assignmentKeyboardTest];
 }
 
 + (NSArray *)fourthWeekAssignment {
+    Assignment *assignmentNotification = [[Assignment alloc] initWithTitle:@"Notification" andType:AssignmentNotification];
     
-    return @[];
+    return @[assignmentNotification];
 }
 
 @end
