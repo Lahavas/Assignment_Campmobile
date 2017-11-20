@@ -225,6 +225,7 @@
 		7A8065AF1FB158AE00CEAF02 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				CE81D4631FC2672400D21257 /* Category */,
 				7A8066031FB1656A00CEAF02 /* Model */,
 				7A8066041FB1664C00CEAF02 /* View */,
 				7A8065E41FB1595B00CEAF02 /* View Controller */,
@@ -312,6 +313,13 @@
 				CE95F8D81FBAD12B00E6631E /* CustomView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CE81D4631FC2672400D21257 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		CE89DC8A1FBBD84200CBFAD3 /* Third Week */ = {

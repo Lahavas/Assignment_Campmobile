@@ -11,9 +11,10 @@
 #import "ContactsTableViewCell.h"
 #import "ContactDetailViewController.h"
 
-@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UISearchResultsUpdating>
 
 @property (strong, nonatomic) UITableView *contactsTableView;
+@property (strong, nonatomic) UISearchController *contactsSearchController;
 @property (strong, nonatomic) UIButton *floatingButton;
 
 @property (strong, nonatomic) NSMutableArray *contactList;
@@ -29,40 +30,9 @@
     
     [self fetchContactStore];
     
-    self.contactsTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    
-    [self.contactsTableView setDelegate:self];
-    [self.contactsTableView setDataSource:self];
-    
-    [self.contactsTableView registerNib:[UINib nibWithNibName:@"ContactsTableViewCell" bundle:nil] forCellReuseIdentifier:[ContactsTableViewCell reuseIdentifier]];
-    
-    [self.contactsTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-    
-    [self.view addSubview:self.contactsTableView];
-    
-    self.floatingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.floatingButton addTarget:self
-                       action:@selector(addContacts)
-             forControlEvents:UIControlEventTouchUpInside];
-    [self.floatingButton setTitle:@"Add" forState:UIControlStateNormal];
-    
-    CGFloat floatingButtonMarginRate = 0.8;
-    CGFloat floatingButtonSize = 65.0;
-    
-    CGFloat floatingButtonOriginX = CGRectGetMaxX(self.view.frame) * floatingButtonMarginRate;
-    CGFloat floatingButtonOriginY = CGRectGetMaxY(self.view.frame) * floatingButtonMarginRate;
-    CGFloat floatingButtonWidth = floatingButtonSize;
-    CGFloat floatingButtonHeight = floatingButtonSize;
-    
-    [self.floatingButton setFrame:CGRectMake(floatingButtonOriginX, floatingButtonOriginY, floatingButtonWidth, floatingButtonHeight)];
-    
-    [self.floatingButton setAutoresizingMask:
-     UIViewAutoresizingFlexibleTopMargin |
-     UIViewAutoresizingFlexibleBottomMargin |
-     UIViewAutoresizingFlexibleRightMargin | 
-     UIViewAutoresizingFlexibleLeftMargin];
-    
-    [self.view addSubview:self.floatingButton];
+    [self initFloatingButton];
+    [self initTableView];
+    [self initSearchController];
 }
 
 #pragma mark - Memory Management
@@ -96,6 +66,57 @@
                                          usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
         [weakSelf.contactList addObject:contact];
     }];
+}
+
+- (void)initFloatingButton {
+    self.floatingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    [self.floatingButton addTarget:self
+                            action:@selector(addContacts)
+                  forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.floatingButton setTitle:@"Add" forState:UIControlStateNormal];
+    
+    CGFloat floatingButtonMarginRate = 0.8;
+    CGFloat floatingButtonSize = 65.0;
+    
+    CGFloat floatingButtonOriginX = CGRectGetMaxX(self.view.frame) * floatingButtonMarginRate;
+    CGFloat floatingButtonOriginY = CGRectGetMaxY(self.view.frame) * floatingButtonMarginRate;
+    CGFloat floatingButtonWidth = floatingButtonSize;
+    CGFloat floatingButtonHeight = floatingButtonSize;
+    
+    [self.floatingButton setFrame:CGRectMake(floatingButtonOriginX, floatingButtonOriginY, floatingButtonWidth, floatingButtonHeight)];
+    
+    [self.floatingButton setAutoresizingMask:
+     UIViewAutoresizingFlexibleTopMargin |
+     UIViewAutoresizingFlexibleBottomMargin |
+     UIViewAutoresizingFlexibleRightMargin |
+     UIViewAutoresizingFlexibleLeftMargin];
+    
+    [self.view addSubview:self.floatingButton];
+}
+
+- (void)initTableView {
+    self.contactsTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    
+    [self.contactsTableView setDelegate:self];
+    [self.contactsTableView setDataSource:self];
+    
+    [self.contactsTableView registerNib:[UINib nibWithNibName:@"ContactsTableViewCell" bundle:nil] forCellReuseIdentifier:[ContactsTableViewCell reuseIdentifier]];
+    
+    [self.contactsTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    
+    [self.view addSubview:self.contactsTableView];
+}
+
+- (void)initSearchController {
+    self.contactsSearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    
+    self.contactsSearchController.searchResultsUpdater = self;
+    
+    self.contactsTableView.tableHeaderView = self.contactsSearchController.searchBar;
+    
+    self.definesPresentationContext = YES;
 }
 
 - (void)addContacts {
@@ -136,6 +157,18 @@
     return contactsTableViewCell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section];
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [[UILocalizedIndexedCollation currentCollation] sectionIndexTitles];;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
+}
+
 #pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -145,6 +178,12 @@
     [contactDetailViewController setContact:selectedContact];
     
     [self.navigationController pushViewController:contactDetailViewController animated:YES];
+}
+
+#pragma mark - Search Result Updating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
 }
 
 @end
