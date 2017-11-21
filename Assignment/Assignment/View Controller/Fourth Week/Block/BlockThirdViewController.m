@@ -1,22 +1,22 @@
 //
-//  BlockSecondViewController.m
+//  BlockThirdViewController.m
 //  Assignment
 //
 //  Created by USER on 2017. 11. 21..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "BlockSecondViewController.h"
+#import "BlockThirdViewController.h"
 
-@interface BlockSecondViewController ()
+@interface BlockThirdViewController ()
 
 @end
 
-@implementation BlockSecondViewController
+@implementation BlockThirdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,22 +1,22 @@
 //
-//  DelegateSecondViewController.m
+//  BlockSecondViewController.m
 //  Assignment
 //
 //  Created by USER on 2017. 11. 21..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "DelegateSecondViewController.h"
+#import "BlockSecondViewController.h"
 
-@interface DelegateSecondViewController ()
+@interface BlockSecondViewController ()
 
 @end
 
-@implementation DelegateSecondViewController
+@implementation BlockSecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

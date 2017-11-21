@@ -8,30 +8,55 @@
 
 #import "NotificationSecondViewController.h"
 
+#import "NotificationThirdViewController.h"
+
 @interface NotificationSecondViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
 
 @implementation NotificationSecondViewController
 
+#pragma mark - View Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(changeTheme)
+                                                 name:@"TESTNOTIFICATIONCHANGE"
+                                               object:nil];
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Memory Management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Private Method
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)changeTheme {
+    NSLog(@"Second Theme Change");
+    [self.textLabel setText:@"Changed"];
 }
-*/
+
+#pragma mark - Actions
+
+- (IBAction)goThird:(id)sender {
+    NotificationThirdViewController *thirdViewController = [[NotificationThirdViewController alloc] initWithNibName:@"NotificationThirdViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:thirdViewController animated:YES];
+}
+
+- (IBAction)postNotification:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TESTNOTIFICATIONCHANGE" object:nil];
+}
 
 @end
