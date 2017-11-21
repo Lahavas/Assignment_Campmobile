@@ -23,8 +23,11 @@
 #import "SetBoundsTestViewController.h"
 
 #import "ImageZoomViewController.h"
-#import "NotificationContainerViewController.h"
 #import "KeyboardTestViewController.h"
+
+#import "NotificationMainViewController.h"
+#import "DelegateMainViewController.h"
+#import "BlockMainViewController.h"
 
 @interface AssignmentViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -130,14 +133,22 @@
         ImageZoomViewController *imageZoomViewController = [[ImageZoomViewController alloc] init];
         
         [self.navigationController pushViewController:imageZoomViewController animated:YES];
-    } else if (type == AssignmentNotification) {
-        NotificationContainerViewController *notificationContainerViewController = [[NotificationContainerViewController alloc] init];
-        
-        [self.navigationController pushViewController:notificationContainerViewController animated:YES];
     } else if (type == AssignmentKeyboardTest) {
         KeyboardTestViewController *keyboardTestViewController = [[KeyboardTestViewController alloc] init];
         
         [self.navigationController pushViewController:keyboardTestViewController animated:YES];
+    } else if (type == AssignmentNotification) {
+        NotificationMainViewController *notificationMainViewController = [[NotificationMainViewController alloc] init];
+        
+        [self.navigationController pushViewController:notificationMainViewController animated:YES];
+    } else if (type == AssignmentDelegate) {
+        DelegateMainViewController *delegateMainViewController = [[DelegateMainViewController alloc] init];
+        
+        [self.navigationController pushViewController:delegateMainViewController animated:YES];
+    } else if (type == AssignmentBlock) {
+        BlockMainViewController *blockMainViewController = [[BlockMainViewController alloc] init];
+        
+        [self.navigationController pushViewController:blockMainViewController animated:YES];
     }
 }
 

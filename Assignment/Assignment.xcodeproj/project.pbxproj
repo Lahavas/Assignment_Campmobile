@@ -38,11 +38,18 @@
 		CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80952C1FB2CF7000079E17 /* SpringAnimationViewController.xib */; };
 		CE89DC8E1FBBDA2500CBFAD3 /* ImageZoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE89DC8C1FBBDA2500CBFAD3 /* ImageZoomViewController.m */; };
 		CE89DC8F1FBBDA2500CBFAD3 /* ImageZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE89DC8D1FBBDA2500CBFAD3 /* ImageZoomViewController.xib */; };
-		CE9519131FBC42030007CE92 /* NotificationContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */; };
-		CE9519141FBC42030007CE92 /* NotificationContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */; };
 		CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8D61FBAD12100E6631E /* CustomView.m */; };
 		CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE95F8D81FBAD12B00E6631E /* CustomView.xib */; };
 		CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */; };
+		CEB907AE1FC3E42D00870F06 /* NotificationMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907AD1FC3E42D00870F06 /* NotificationMainViewController.m */; };
+		CEB907B11FC3E49800870F06 /* NotificationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907B01FC3E49800870F06 /* NotificationSecondViewController.m */; };
+		CEB907B41FC3E4A500870F06 /* NotificationThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907B31FC3E4A500870F06 /* NotificationThirdViewController.m */; };
+		CEB907B71FC3E4AF00870F06 /* DelegateMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907B61FC3E4AF00870F06 /* DelegateMainViewController.m */; };
+		CEB907BA1FC3E4BD00870F06 /* DelegateSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907B91FC3E4BD00870F06 /* DelegateSecondViewController.m */; };
+		CEB907BD1FC3E4C500870F06 /* DelegateThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907BC1FC3E4C500870F06 /* DelegateThirdViewController.m */; };
+		CEB907C01FC3E4CD00870F06 /* BlockMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907BF1FC3E4CD00870F06 /* BlockMainViewController.m */; };
+		CEB907C31FC3E4D600870F06 /* BlockSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907C21FC3E4D600870F06 /* BlockSecondViewController.m */; };
+		CEB907C61FC3E4DD00870F06 /* BlockThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907C51FC3E4DD00870F06 /* BlockThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,14 +127,29 @@
 		CE89DC8B1FBBDA2500CBFAD3 /* ImageZoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomViewController.h; sourceTree = "<group>"; };
 		CE89DC8C1FBBDA2500CBFAD3 /* ImageZoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomViewController.m; sourceTree = "<group>"; };
 		CE89DC8D1FBBDA2500CBFAD3 /* ImageZoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageZoomViewController.xib; sourceTree = "<group>"; };
-		CE9519101FBC42030007CE92 /* NotificationContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationContainerViewController.h; sourceTree = "<group>"; };
-		CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationContainerViewController.m; sourceTree = "<group>"; };
-		CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationContainerViewController.xib; sourceTree = "<group>"; };
 		CE95F8D51FBAD12100E6631E /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		CE95F8D61FBAD12100E6631E /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		CE95F8D81FBAD12B00E6631E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		CE95F8DD1FBADA0B00E6631E /* SetBoundsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetBoundsTestViewController.h; sourceTree = "<group>"; };
 		CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetBoundsTestViewController.m; sourceTree = "<group>"; };
+		CEB907AC1FC3E42D00870F06 /* NotificationMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMainViewController.h; sourceTree = "<group>"; };
+		CEB907AD1FC3E42D00870F06 /* NotificationMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationMainViewController.m; sourceTree = "<group>"; };
+		CEB907AF1FC3E49800870F06 /* NotificationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationSecondViewController.h; sourceTree = "<group>"; };
+		CEB907B01FC3E49800870F06 /* NotificationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationSecondViewController.m; sourceTree = "<group>"; };
+		CEB907B21FC3E4A500870F06 /* NotificationThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationThirdViewController.h; sourceTree = "<group>"; };
+		CEB907B31FC3E4A500870F06 /* NotificationThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationThirdViewController.m; sourceTree = "<group>"; };
+		CEB907B51FC3E4AF00870F06 /* DelegateMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DelegateMainViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/DelegateMainViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907B61FC3E4AF00870F06 /* DelegateMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DelegateMainViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/DelegateMainViewController.m"; sourceTree = SOURCE_ROOT; };
+		CEB907B81FC3E4BD00870F06 /* DelegateSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DelegateSecondViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/DelegateSecondViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907B91FC3E4BD00870F06 /* DelegateSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DelegateSecondViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/DelegateSecondViewController.m"; sourceTree = SOURCE_ROOT; };
+		CEB907BB1FC3E4C500870F06 /* DelegateThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DelegateThirdViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/DelegateThirdViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907BC1FC3E4C500870F06 /* DelegateThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DelegateThirdViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/DelegateThirdViewController.m"; sourceTree = SOURCE_ROOT; };
+		CEB907BE1FC3E4CD00870F06 /* BlockMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlockMainViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/BlockMainViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907BF1FC3E4CD00870F06 /* BlockMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BlockMainViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/BlockMainViewController.m"; sourceTree = SOURCE_ROOT; };
+		CEB907C11FC3E4D600870F06 /* BlockSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlockSecondViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/BlockSecondViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907C21FC3E4D600870F06 /* BlockSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BlockSecondViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/BlockSecondViewController.m"; sourceTree = SOURCE_ROOT; };
+		CEB907C41FC3E4DD00870F06 /* BlockThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlockThirdViewController.h; path = "Assignment/View Controller/Fourth Week/Notification/BlockThirdViewController.h"; sourceTree = SOURCE_ROOT; };
+		CEB907C51FC3E4DD00870F06 /* BlockThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BlockThirdViewController.m; path = "Assignment/View Controller/Fourth Week/Notification/BlockThirdViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,9 +350,12 @@
 		CE81D4671FC2773600D21257 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				CE9519101FBC42030007CE92 /* NotificationContainerViewController.h */,
-				CE9519111FBC42030007CE92 /* NotificationContainerViewController.m */,
-				CE9519121FBC42030007CE92 /* NotificationContainerViewController.xib */,
+				CEB907AC1FC3E42D00870F06 /* NotificationMainViewController.h */,
+				CEB907AD1FC3E42D00870F06 /* NotificationMainViewController.m */,
+				CEB907AF1FC3E49800870F06 /* NotificationSecondViewController.h */,
+				CEB907B01FC3E49800870F06 /* NotificationSecondViewController.m */,
+				CEB907B21FC3E4A500870F06 /* NotificationThirdViewController.h */,
+				CEB907B31FC3E4A500870F06 /* NotificationThirdViewController.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -338,6 +363,12 @@
 		CE81D4681FC2774300D21257 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				CEB907B51FC3E4AF00870F06 /* DelegateMainViewController.h */,
+				CEB907B61FC3E4AF00870F06 /* DelegateMainViewController.m */,
+				CEB907B81FC3E4BD00870F06 /* DelegateSecondViewController.h */,
+				CEB907B91FC3E4BD00870F06 /* DelegateSecondViewController.m */,
+				CEB907BB1FC3E4C500870F06 /* DelegateThirdViewController.h */,
+				CEB907BC1FC3E4C500870F06 /* DelegateThirdViewController.m */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -345,6 +376,12 @@
 		CE81D4691FC2775100D21257 /* Block */ = {
 			isa = PBXGroup;
 			children = (
+				CEB907BE1FC3E4CD00870F06 /* BlockMainViewController.h */,
+				CEB907BF1FC3E4CD00870F06 /* BlockMainViewController.m */,
+				CEB907C11FC3E4D600870F06 /* BlockSecondViewController.h */,
+				CEB907C21FC3E4D600870F06 /* BlockSecondViewController.m */,
+				CEB907C41FC3E4DD00870F06 /* BlockThirdViewController.h */,
+				CEB907C51FC3E4DD00870F06 /* BlockThirdViewController.m */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -482,7 +519,6 @@
 				CE89DC8F1FBBDA2500CBFAD3 /* ImageZoomViewController.xib in Resources */,
 				CE80952E1FB2CF7000079E17 /* SpringAnimationViewController.xib in Resources */,
 				7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */,
-				CE9519141FBC42030007CE92 /* NotificationContainerViewController.xib in Resources */,
 				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
 				CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */,
 				CE35745B1FBE8F36002101DC /* KeyboardTestViewController.xib in Resources */,
@@ -510,25 +546,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9519131FBC42030007CE92 /* NotificationContainerViewController.m in Sources */,
 				7A80660C1FB1826C00CEAF02 /* Assignment.m in Sources */,
 				7A06F8A31FB8C11700BC9837 /* ContactsViewController.m in Sources */,
 				CE80952D1FB2CF7000079E17 /* SpringAnimationViewController.m in Sources */,
 				CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */,
+				CEB907AE1FC3E42D00870F06 /* NotificationMainViewController.m in Sources */,
 				7A06F8A81FB8C1BB00BC9837 /* ContactsTableViewCell.m in Sources */,
 				CE95F8D71FBAD12100E6631E /* CustomView.m in Sources */,
 				7A2572E31FB23057005F4E87 /* Contact.m in Sources */,
 				7A8066011FB1639700CEAF02 /* AssignmentViewController.m in Sources */,
+				CEB907C31FC3E4D600870F06 /* BlockSecondViewController.m in Sources */,
 				CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */,
 				7A06F89C1FB8BE6500BC9837 /* ContactsResizingTableViewCell.m in Sources */,
+				CEB907BD1FC3E4C500870F06 /* DelegateThirdViewController.m in Sources */,
+				CEB907BA1FC3E4BD00870F06 /* DelegateSecondViewController.m in Sources */,
 				7A06F8991FB8AA8E00BC9837 /* PageContainerViewController.m in Sources */,
 				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,
+				CEB907C01FC3E4CD00870F06 /* BlockMainViewController.m in Sources */,
 				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
 				CE35745A1FBE8F36002101DC /* KeyboardTestViewController.m in Sources */,
+				CEB907B71FC3E4AF00870F06 /* DelegateMainViewController.m in Sources */,
+				CEB907B11FC3E49800870F06 /* NotificationSecondViewController.m in Sources */,
 				7A06F8B21FB8C35000BC9837 /* ContactDetailViewController.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
+				CEB907B41FC3E4A500870F06 /* NotificationThirdViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,
+				CEB907C61FC3E4DD00870F06 /* BlockThirdViewController.m in Sources */,
 				CE89DC8E1FBBDA2500CBFAD3 /* ImageZoomViewController.m in Sources */,
 				7A06F8BA1FB8D3AC00BC9837 /* ContactProfileView.m in Sources */,
 				7A8065B21FB158AE00CEAF02 /* AppDelegate.m in Sources */,

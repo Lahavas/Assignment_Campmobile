@@ -21,7 +21,9 @@ typedef NS_ENUM(NSInteger, AssignmentType) {
     AssignmentSetBoundsTest,
     AssignmentImageZoom,
     AssignmentKeyboardTest,
-    AssignmentNotification
+    AssignmentNotification,
+    AssignmentDelegate,
+    AssignmentBlock
 };
 
 @interface AssignmentManager : NSObject

@@ -39,8 +39,10 @@
 
 + (NSArray *)fourthWeekAssignment {
     Assignment *assignmentNotification = [[Assignment alloc] initWithTitle:@"Notification" andType:AssignmentNotification];
+    Assignment *assignmentDelegate = [[Assignment alloc] initWithTitle:@"Delegate" andType:AssignmentDelegate];
+    Assignment *assignmentBlock = [[Assignment alloc] initWithTitle:@"Block" andType:AssignmentBlock];
     
-    return @[assignmentNotification];
+    return @[assignmentNotification, assignmentDelegate, assignmentBlock];
 }
 
 @end
