@@ -13,6 +13,8 @@
 
 @interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UISearchResultsUpdating>
 
+#pragma mark - Private Properties
+
 @property (strong, nonatomic) UITableView *contactsTableView;
 @property (strong, nonatomic) UISearchController *contactsSearchController;
 @property (strong, nonatomic) UIButton *floatingButton;
@@ -20,6 +22,8 @@
 @property (strong, nonatomic) NSMutableArray *contactList;
 
 @end
+
+#pragma mark -
 
 @implementation ContactsViewController
 
