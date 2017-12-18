@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DelegateMainViewController">
             <connections>
-                <outlet property="textLabel" destination="JJK-fx-D1U" id="fqo-xB-OCM"/>
+                <outlet property="blueView" destination="7dU-on-g2y" id="JAT-9S-0jb"/>
+                <outlet property="greenView" destination="DfZ-1e-1cj" id="sAB-Nk-XB2"/>
+                <outlet property="redView" destination="DZw-dk-UF1" id="IA0-S5-eu3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yellowView" destination="CpZ-sZ-q3U" id="G5q-MJ-ptD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,39 +23,64 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-dU-ncb">
-                    <rect key="frame" x="90" y="318" width="196" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Change Second VC's Theme"/>
-                    <connections>
-                        <action selector="changeSecondVCTheme:" destination="-1" eventType="touchUpInside" id="bb1-eh-jfa"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hah-f5-QQx">
-                    <rect key="frame" x="98" y="356" width="180" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Change Third VC's Theme"/>
-                    <connections>
-                        <action selector="changeThirdVCTheme:" destination="-1" eventType="touchUpInside" id="S0p-cw-dVr"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMq-mq-Xyg">
-                    <rect key="frame" x="149" y="230" width="76" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Go Second"/>
-                    <connections>
-                        <action selector="goSecond:" destination="-1" eventType="touchUpInside" id="0DG-SD-Zn7"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJK-fx-D1U">
-                    <rect key="frame" x="16" y="185" width="343" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dU-on-g2y" customClass="DelegationView">
+                    <rect key="frame" x="195" y="36" width="163.5" height="300"/>
+                    <color key="backgroundColor" red="0.24462260899999999" green="0.38733166450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Blue"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Blue View Tapped"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-sZ-q3U" customClass="DelegationView">
+                    <rect key="frame" x="195" y="351.5" width="163.5" height="299.5"/>
+                    <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Yellow"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Yellow View Tapped"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-1e-1cj" customClass="DelegationView">
+                    <rect key="frame" x="16" y="351.5" width="163.5" height="299.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Green"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Green View Tapped"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZw-dk-UF1" customClass="DelegationView">
+                    <rect key="frame" x="16" y="36" width="163.5" height="300"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Red"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Red View Tapped"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="height" secondItem="7dU-on-g2y" secondAttribute="height" id="3Ln-D2-7si"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="3gd-xs-R9S"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CpZ-sZ-q3U" secondAttribute="trailing" constant="16" id="6En-Bg-jyl"/>
+                <constraint firstItem="7dU-on-g2y" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="IW0-W2-kPE"/>
+                <constraint firstItem="DfZ-1e-1cj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Ou5-Od-OpY"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="CpZ-sZ-q3U" secondAttribute="bottom" constant="16" id="Rtk-qr-QCC"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="width" secondItem="CpZ-sZ-q3U" secondAttribute="width" id="VU3-Lw-l6l"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="DfZ-1e-1cj" secondAttribute="bottom" constant="16" id="cvw-zZ-guX"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="width" secondItem="7dU-on-g2y" secondAttribute="width" id="jWx-dg-odw"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="height" secondItem="CpZ-sZ-q3U" secondAttribute="height" id="lLt-xW-PlX"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="height" secondItem="DfZ-1e-1cj" secondAttribute="height" id="pQ3-IF-ZAc"/>
+                <constraint firstItem="7dU-on-g2y" firstAttribute="leading" secondItem="DZw-dk-UF1" secondAttribute="trailing" constant="16" id="tjl-ra-uvM"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="7dU-on-g2y" secondAttribute="trailing" constant="16" id="vIf-xb-HRx"/>
+                <constraint firstItem="CpZ-sZ-q3U" firstAttribute="top" secondItem="7dU-on-g2y" secondAttribute="bottom" constant="16" id="vMs-QI-LZP"/>
+                <constraint firstItem="CpZ-sZ-q3U" firstAttribute="leading" secondItem="DfZ-1e-1cj" secondAttribute="trailing" constant="16" id="wCE-25-KMv"/>
+                <constraint firstItem="DfZ-1e-1cj" firstAttribute="top" secondItem="DZw-dk-UF1" secondAttribute="bottom" constant="16" id="yOd-NC-g0L"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="yfB-ib-i4K"/>
+                <constraint firstItem="DZw-dk-UF1" firstAttribute="width" secondItem="DfZ-1e-1cj" secondAttribute="width" id="yyV-Ud-ktr"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

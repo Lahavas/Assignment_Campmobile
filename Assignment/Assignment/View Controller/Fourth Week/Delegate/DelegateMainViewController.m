@@ -8,12 +8,14 @@
 
 #import "DelegateMainViewController.h"
 
-#import "DelegateSecondViewController.h"
-#import "DelegateThirdViewController.h"
+#import "DelegationView.h"
 
-@interface DelegateMainViewController ()
+@interface DelegateMainViewController () <LabelChangeDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet DelegationView *redView;
+@property (weak, nonatomic) IBOutlet DelegationView *blueView;
+@property (weak, nonatomic) IBOutlet DelegationView *greenView;
+@property (weak, nonatomic) IBOutlet DelegationView *yellowView;
 
 @end
 
@@ -24,46 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.redView setDelegate:self];
+    [self.blueView setDelegate:self];
+    [self.greenView setDelegate:self];
+    [self.yellowView setDelegate:self];
 }
 
-#pragma mark - Memory Management
+#pragma mark - Label Change Delegation
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Actions
-
-- (IBAction)goSecond:(id)sender {
-    DelegateSecondViewController *secondViewController = [[DelegateSecondViewController alloc] initWithNibName:@"DelegateSecondViewController" bundle:nil];
-    
-    [self.navigationController pushViewController:secondViewController animated:YES];
-}
-
-- (IBAction)changeSecondVCTheme:(id)sender {
-    DelegateSecondViewController *secondViewController = [[DelegateSecondViewController alloc] initWithNibName:@"DelegateSecondViewController" bundle:nil];
-    [secondViewController setDelegate:self];
-    
-    if ([secondViewController conformsToProtocol:@protocol(ThemeChangeDelegate)]) {
-        [secondViewController changeTheme];
-    }
-}
-
-- (IBAction)changeThirdVCTheme:(id)sender {
-    DelegateThirdViewController *thirdViewController = [[DelegateThirdViewController alloc] initWithNibName:@"DelegateThirdViewController" bundle:nil];
-    [thirdViewController setDelegate:self];
-    
-    if ([thirdViewController conformsToProtocol:@protocol(ThemeChangeDelegate)]) {
-        [thirdViewController changeTheme];
-    }
-}
-
-#pragma mark - Theme Change Delegate
-
-- (void)changeTheme {
-    NSLog(@"Main Theme Change");
-    [self.textLabel setText:@"Changed"];
+- (void)delegationViewTap:(NSString *)string {
+    [self.redView setLabelString:string];
+    [self.blueView setLabelString:string];
+    [self.greenView setLabelString:string];
+    [self.yellowView setLabelString:string];
 }
 
 @end

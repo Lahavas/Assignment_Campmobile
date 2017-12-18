@@ -11,11 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationMainViewController">
             <connections>
-                <outlet property="blueView" destination="7Dw-Yl-yxx" id="UGw-OP-ZD3"/>
-                <outlet property="greenView" destination="8Hb-vh-OIa" id="SBu-Ng-aok"/>
-                <outlet property="redView" destination="Ehq-mc-vxi" id="zHC-J9-6BM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="yellowView" destination="CHk-Fb-3lH" id="F9R-dX-CUz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,10 +25,8 @@
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Blue"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Blue View Tapped"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="glt-za-w69" appends="YES" id="Jbc-vv-dUx"/>
-                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHk-Fb-3lH" customClass="NotificationView">
                     <rect key="frame" x="195.5" y="351.5" width="163.5" height="299.5"/>
@@ -40,10 +34,8 @@
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Yellow"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Yellow View Tapped"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="Pjr-p5-1oA" appends="YES" id="I6K-ZM-VRs"/>
-                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-vh-OIa" customClass="NotificationView">
                     <rect key="frame" x="16" y="351.5" width="163.5" height="299.5"/>
@@ -51,10 +43,8 @@
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Green"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Green View Tapped"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="0gP-fX-CM9" appends="YES" id="0Op-Iu-iaV"/>
-                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-mc-vxi" customClass="NotificationView">
                     <rect key="frame" x="16" y="36" width="163.5" height="299.5"/>
@@ -62,10 +52,8 @@
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Red"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Red View Tapped"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="xx0-C5-7YH" appends="YES" id="j0y-YN-taw"/>
-                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,25 +80,5 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
-        <tapGestureRecognizer id="xx0-C5-7YH">
-            <connections>
-                <action selector="tapRedView:" destination="-1" id="n0f-xt-yKb"/>
-            </connections>
-        </tapGestureRecognizer>
-        <tapGestureRecognizer id="glt-za-w69">
-            <connections>
-                <action selector="tapBlueView:" destination="-1" id="qnY-JZ-cNR"/>
-            </connections>
-        </tapGestureRecognizer>
-        <tapGestureRecognizer id="0gP-fX-CM9">
-            <connections>
-                <action selector="tapGreenView:" destination="-1" id="8zd-PX-uVH"/>
-            </connections>
-        </tapGestureRecognizer>
-        <tapGestureRecognizer id="Pjr-p5-1oA">
-            <connections>
-                <action selector="tapYellowView:" destination="-1" id="nL0-GP-cwz"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
 </document>

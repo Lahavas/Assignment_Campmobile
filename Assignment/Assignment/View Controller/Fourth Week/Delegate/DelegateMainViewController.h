@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ThemeChangeDelegate.h"
-
-@interface DelegateMainViewController : UIViewController <ThemeChangeDelegate>
-
-@property (weak, nonatomic) id<ThemeChangeDelegate> delegate;
-
-- (void)changeTheme;
+@interface DelegateMainViewController : UIViewController
 
 @end

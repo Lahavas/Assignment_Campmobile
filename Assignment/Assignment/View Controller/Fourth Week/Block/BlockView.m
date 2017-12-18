@@ -1,14 +1,14 @@
 //
-//  NotificationView.m
+//  BlockView.m
 //  Assignment
 //
-//  Created by USER on 2017. 12. 18..
+//  Created by Jaeho on 2017. 12. 19..
 //  Copyright © 2017년 yeon. All rights reserved.
 //
 
-#import "NotificationView.h"
+#import "BlockView.h"
 
-@interface NotificationView ()
+@interface BlockView ()
 
 @property (strong, nonatomic) UILabel *label;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation NotificationView
+@implementation BlockView
 
 #pragma mark - Initialization
 
@@ -30,13 +30,8 @@
         [self setUpConstraints];
         
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                            action:@selector(tapNotificationView:)];
+                                                                            action:@selector(tapDelegationView:)];
         [self addGestureRecognizer:self.tapGestureRecognizer];
-        
-        [NSNotificationCenter.defaultCenter addObserver:self
-                                               selector:@selector(fixLabel:)
-                                                   name:notificationName
-                                                 object:nil];
     }
     
     return self;
@@ -46,8 +41,6 @@
 
 - (void)dealloc {
     [self removeGestureRecognizer:self.tapGestureRecognizer];
-    
-    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 #pragma mark - Accessor Methods
@@ -62,19 +55,10 @@
 
 #pragma mark - Actions
 
-- (void)tapNotificationView:(id)sender {
-    NSDictionary *notificationInfo = @{userInfoKey: self.sendingString};
+- (void)tapDelegationView:(id)sender {
+    NSString *fixedLabelString = self.sendingString;
     
-    [NSNotificationCenter.defaultCenter postNotificationName:notificationName
-                                                      object:self
-                                                    userInfo:notificationInfo];
-}
-
-- (void)fixLabel:(NSNotification *)notification {
-    NSDictionary *userInfo = notification.userInfo;
-    NSString *labelText = userInfo[userInfoKey];
-    
-    [self setLabelString:labelText];
+    self.fixLabelWithBlock(fixedLabelString);
 }
 
 #pragma mark - Private Methods
