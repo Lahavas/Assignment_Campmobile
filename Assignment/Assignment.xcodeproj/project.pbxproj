@@ -29,6 +29,7 @@
 		7A80660F1FB1A36800CEAF02 /* AssignmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80660E1FB1A36800CEAF02 /* AssignmentManager.m */; };
 		7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A867E081FB50F4800603CCE /* StandardCellViewController.m */; };
 		7AF1FAA11FB1F75D0083ED41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */; };
+		CE0723BF1FE7C35900101310 /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0723BE1FE7C35900101310 /* NotificationView.m */; };
 		CE35745A1FBE8F36002101DC /* KeyboardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3574581FBE8F36002101DC /* KeyboardTestViewController.m */; };
 		CE35745B1FBE8F36002101DC /* KeyboardTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3574591FBE8F36002101DC /* KeyboardTestViewController.xib */; };
 		CE715FF91FB447700004E3F6 /* AutoResizingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE715FF81FB447700004E3F6 /* AutoResizingTestViewController.m */; };
@@ -43,10 +44,6 @@
 		CE95F8DF1FBADA0B00E6631E /* SetBoundsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95F8DE1FBADA0B00E6631E /* SetBoundsTestViewController.m */; };
 		CEB907CA1FC3E5D900870F06 /* NotificationMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907C81FC3E5D900870F06 /* NotificationMainViewController.m */; };
 		CEB907CB1FC3E5D900870F06 /* NotificationMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB907C91FC3E5D900870F06 /* NotificationMainViewController.xib */; };
-		CEB907CF1FC3E5EC00870F06 /* NotificationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907CD1FC3E5EC00870F06 /* NotificationSecondViewController.m */; };
-		CEB907D01FC3E5EC00870F06 /* NotificationSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB907CE1FC3E5EC00870F06 /* NotificationSecondViewController.xib */; };
-		CEB907D41FC3E5F900870F06 /* NotificationThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907D21FC3E5F900870F06 /* NotificationThirdViewController.m */; };
-		CEB907D51FC3E5F900870F06 /* NotificationThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB907D31FC3E5F900870F06 /* NotificationThirdViewController.xib */; };
 		CEB907D91FC3E61300870F06 /* DelegateMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907D71FC3E61300870F06 /* DelegateMainViewController.m */; };
 		CEB907DA1FC3E61300870F06 /* DelegateMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB907D81FC3E61300870F06 /* DelegateMainViewController.xib */; };
 		CEB907DE1FC3E62100870F06 /* DelegateSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB907DC1FC3E62100870F06 /* DelegateSecondViewController.m */; };
@@ -122,6 +119,8 @@
 		7A867E071FB50F4800603CCE /* StandardCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardCellViewController.h; sourceTree = "<group>"; };
 		7A867E081FB50F4800603CCE /* StandardCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardCellViewController.m; sourceTree = "<group>"; };
 		7AF1FAA01FB1F75D0083ED41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE0723BD1FE7C35900101310 /* NotificationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationView.h; sourceTree = "<group>"; };
+		CE0723BE1FE7C35900101310 /* NotificationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationView.m; sourceTree = "<group>"; };
 		CE3574571FBE8F36002101DC /* KeyboardTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardTestViewController.h; sourceTree = "<group>"; };
 		CE3574581FBE8F36002101DC /* KeyboardTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardTestViewController.m; sourceTree = "<group>"; };
 		CE3574591FBE8F36002101DC /* KeyboardTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardTestViewController.xib; sourceTree = "<group>"; };
@@ -144,12 +143,6 @@
 		CEB907C71FC3E5D900870F06 /* NotificationMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMainViewController.h; sourceTree = "<group>"; };
 		CEB907C81FC3E5D900870F06 /* NotificationMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationMainViewController.m; sourceTree = "<group>"; };
 		CEB907C91FC3E5D900870F06 /* NotificationMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationMainViewController.xib; sourceTree = "<group>"; };
-		CEB907CC1FC3E5EC00870F06 /* NotificationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationSecondViewController.h; sourceTree = "<group>"; };
-		CEB907CD1FC3E5EC00870F06 /* NotificationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationSecondViewController.m; sourceTree = "<group>"; };
-		CEB907CE1FC3E5EC00870F06 /* NotificationSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationSecondViewController.xib; sourceTree = "<group>"; };
-		CEB907D11FC3E5F900870F06 /* NotificationThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationThirdViewController.h; sourceTree = "<group>"; };
-		CEB907D21FC3E5F900870F06 /* NotificationThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationThirdViewController.m; sourceTree = "<group>"; };
-		CEB907D31FC3E5F900870F06 /* NotificationThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationThirdViewController.xib; sourceTree = "<group>"; };
 		CEB907D61FC3E61300870F06 /* DelegateMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateMainViewController.h; sourceTree = "<group>"; };
 		CEB907D71FC3E61300870F06 /* DelegateMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateMainViewController.m; sourceTree = "<group>"; };
 		CEB907D81FC3E61300870F06 /* DelegateMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DelegateMainViewController.xib; sourceTree = "<group>"; };
@@ -372,12 +365,8 @@
 				CEB907C71FC3E5D900870F06 /* NotificationMainViewController.h */,
 				CEB907C81FC3E5D900870F06 /* NotificationMainViewController.m */,
 				CEB907C91FC3E5D900870F06 /* NotificationMainViewController.xib */,
-				CEB907CC1FC3E5EC00870F06 /* NotificationSecondViewController.h */,
-				CEB907CD1FC3E5EC00870F06 /* NotificationSecondViewController.m */,
-				CEB907CE1FC3E5EC00870F06 /* NotificationSecondViewController.xib */,
-				CEB907D11FC3E5F900870F06 /* NotificationThirdViewController.h */,
-				CEB907D21FC3E5F900870F06 /* NotificationThirdViewController.m */,
-				CEB907D31FC3E5F900870F06 /* NotificationThirdViewController.xib */,
+				CE0723BD1FE7C35900101310 /* NotificationView.h */,
+				CE0723BE1FE7C35900101310 /* NotificationView.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -553,10 +542,8 @@
 				7A06F8B31FB8C35000BC9837 /* ContactDetailViewController.xib in Resources */,
 				CEB907EE1FC3E65000870F06 /* BlockSecondViewController.xib in Resources */,
 				CEB907DA1FC3E61300870F06 /* DelegateMainViewController.xib in Resources */,
-				CEB907D01FC3E5EC00870F06 /* NotificationSecondViewController.xib in Resources */,
 				7A06F8A91FB8C1BB00BC9837 /* ContactsTableViewCell.xib in Resources */,
 				CEB907E91FC3E64600870F06 /* BlockMainViewController.xib in Resources */,
-				CEB907D51FC3E5F900870F06 /* NotificationThirdViewController.xib in Resources */,
 				CE95F8D91FBAD12B00E6631E /* CustomView.xib in Resources */,
 				CEB907E41FC3E62E00870F06 /* DelegateThirdViewController.xib in Resources */,
 				CE35745B1FBE8F36002101DC /* KeyboardTestViewController.xib in Resources */,
@@ -599,15 +586,14 @@
 				7A06F89F1FB8BEB400BC9837 /* ContactsResizingViewController.m in Sources */,
 				CEB907E31FC3E62E00870F06 /* DelegateThirdViewController.m in Sources */,
 				7A867E091FB50F4800603CCE /* StandardCellViewController.m in Sources */,
+				CE0723BF1FE7C35900101310 /* NotificationView.m in Sources */,
 				7A8065C01FB158AE00CEAF02 /* main.m in Sources */,
 				CEB907E81FC3E64600870F06 /* BlockMainViewController.m in Sources */,
 				CE35745A1FBE8F36002101DC /* KeyboardTestViewController.m in Sources */,
 				7A06F8B21FB8C35000BC9837 /* ContactDetailViewController.m in Sources */,
 				CE8095281FB29EFB00079E17 /* SimpleAnimationViewController.m in Sources */,
 				CEB907CA1FC3E5D900870F06 /* NotificationMainViewController.m in Sources */,
-				CEB907D41FC3E5F900870F06 /* NotificationThirdViewController.m in Sources */,
 				7A2572DB1FB200CD005F4E87 /* PageChildViewController.m in Sources */,
-				CEB907CF1FC3E5EC00870F06 /* NotificationSecondViewController.m in Sources */,
 				CE89DC8E1FBBDA2500CBFAD3 /* ImageZoomViewController.m in Sources */,
 				7A06F8BA1FB8D3AC00BC9837 /* ContactProfileView.m in Sources */,
 				CEB907F21FC3E65C00870F06 /* BlockThirdViewController.m in Sources */,

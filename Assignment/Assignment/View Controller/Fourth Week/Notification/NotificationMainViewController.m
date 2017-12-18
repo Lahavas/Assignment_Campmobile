@@ -8,11 +8,14 @@
 
 #import "NotificationMainViewController.h"
 
-#import "NotificationSecondViewController.h"
+#import "NotificationView.h"
 
 @interface NotificationMainViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet NotificationView *redView;
+@property (weak, nonatomic) IBOutlet NotificationView *blueView;
+@property (weak, nonatomic) IBOutlet NotificationView *greenView;
+@property (weak, nonatomic) IBOutlet NotificationView *yellowView;
 
 @end
 
@@ -23,40 +26,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(changeTheme)
-                                                 name:@"TESTNOTIFICATIONCHANGE"
-                                               object:nil];
+    
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark - Memory Management
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Private Method
-
-- (void)changeTheme {
-    NSLog(@"Main Theme Change");
-    [self.textLabel setText:@"Changed"];
+    
 }
 
 #pragma mark - Actions
 
-- (IBAction)goSecond:(id)sender {
-    NotificationSecondViewController *secondViewController = [[NotificationSecondViewController alloc] initWithNibName:@"NotificationSecondViewController" bundle:nil];
-    
-    [self.navigationController pushViewController:secondViewController animated:YES];
+- (IBAction)tabRedView:(id)sender {
+    NSLog(@"Tab Red View");
 }
 
-- (IBAction)postNotification:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"TESTNOTIFICATIONCHANGE" object:nil];
+- (IBAction)tabBlueView:(id)sender {
+    NSLog(@"Tab Blue View");
+}
+
+- (IBAction)tabGreenView:(id)sender {
+    NSLog(@"Tab Green View");
+}
+
+- (IBAction)tabYellowView:(id)sender {
+    NSLog(@"Tab Yellow View");
 }
 
 @end
