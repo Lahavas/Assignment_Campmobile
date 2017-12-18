@@ -94,22 +94,22 @@
         </view>
         <tapGestureRecognizer id="xx0-C5-7YH">
             <connections>
-                <action selector="tabRedView:" destination="-1" id="EtI-19-Oub"/>
+                <action selector="tapRedView:" destination="-1" id="n0f-xt-yKb"/>
             </connections>
         </tapGestureRecognizer>
         <tapGestureRecognizer id="glt-za-w69">
             <connections>
-                <action selector="tabBlueView:" destination="-1" id="wUu-Jk-ow5"/>
+                <action selector="tapBlueView:" destination="-1" id="qnY-JZ-cNR"/>
             </connections>
         </tapGestureRecognizer>
         <tapGestureRecognizer id="0gP-fX-CM9">
             <connections>
-                <action selector="tabGreenView:" destination="-1" id="sdw-VO-mOa"/>
+                <action selector="tapGreenView:" destination="-1" id="8zd-PX-uVH"/>
             </connections>
         </tapGestureRecognizer>
         <tapGestureRecognizer id="Pjr-p5-1oA">
             <connections>
-                <action selector="tabYellowView:" destination="-1" id="QlY-s2-Vma"/>
+                <action selector="tapYellowView:" destination="-1" id="nL0-GP-cwz"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

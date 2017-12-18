@@ -26,29 +26,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-}
-
-- (void)dealloc {
-    
 }
 
 #pragma mark - Actions
 
-- (IBAction)tabRedView:(id)sender {
-    NSLog(@"Tab Red View");
+- (IBAction)tapRedView:(id)sender {
+    NSDictionary *redViewInfo = @{@"labelText": @"Red View Tapped"};
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"FixLabelNotification"
+                                                      object:self
+                                                    userInfo:redViewInfo];
 }
 
-- (IBAction)tabBlueView:(id)sender {
-    NSLog(@"Tab Blue View");
+- (IBAction)tapBlueView:(id)sender {
+    NSDictionary *blueViewInfo = @{@"labelText": @"Blue View Tapped"};
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"FixLabelNotification"
+                                                      object:self
+                                                    userInfo:blueViewInfo];
 }
 
-- (IBAction)tabGreenView:(id)sender {
-    NSLog(@"Tab Green View");
+- (IBAction)tapGreenView:(id)sender {
+    NSDictionary *greenViewInfo = @{@"labelText": @"Green View Tapped"};
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"FixLabelNotification"
+                                                      object:self
+                                                    userInfo:greenViewInfo];
 }
 
-- (IBAction)tabYellowView:(id)sender {
-    NSLog(@"Tab Yellow View");
+- (IBAction)tapYellowView:(id)sender {
+    NSDictionary *yellowViewInfo = @{@"labelText": @"Yellow View Tapped"};
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"FixLabelNotification"
+                                                      object:self
+                                                    userInfo:yellowViewInfo];
 }
 
 @end

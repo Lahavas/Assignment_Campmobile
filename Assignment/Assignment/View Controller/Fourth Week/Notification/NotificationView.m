@@ -26,9 +26,20 @@
         
         [self addSubview:self.label];
         [self setUpConstraints];
+        
+        [NSNotificationCenter.defaultCenter addObserver:self
+                                               selector:@selector(fixLabel:)
+                                                   name:@"FixLabelNotification"
+                                                 object:nil];
     }
     
     return self;
+}
+
+#pragma mark - Object Life Cycle
+
+- (void)dealloc {
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 #pragma mark - Accessor Methods
@@ -39,6 +50,15 @@
     if (self.label) {
         [self.label setText:self.labelString];
     }
+}
+
+#pragma mark - Actions
+
+- (void)fixLabel:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    NSString *labelText = userInfo[@"labelText"];
+    
+    [self setLabelString:labelText];
 }
 
 #pragma mark - Private Methods
