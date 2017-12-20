@@ -28,17 +28,17 @@
     
     __weak typeof(self) weakSelf = self;
     
-    void (^block)(NSString *) = ^(NSString *string) {
-        [weakSelf.redView setLabelString:string];
-        [weakSelf.blueView setLabelString:string];
-        [weakSelf.greenView setLabelString:string];
-        [weakSelf.yellowView setLabelString:string];
+    void (^changeLabelBlock)(NSString *) = ^(NSString *string) {
+        [weakSelf.redView.viewNamelabel setText:string];
+        [weakSelf.blueView.viewNamelabel setText:string];
+        [weakSelf.greenView.viewNamelabel setText:string];
+        [weakSelf.yellowView.viewNamelabel setText:string];
     };
     
-    [self.redView setFixLabelWithBlock:block];
-    [self.blueView setFixLabelWithBlock:block];
-    [self.greenView setFixLabelWithBlock:block];
-    [self.yellowView setFixLabelWithBlock:block];
+    [self.redView setChangeLabelWithBlock:changeLabelBlock];
+    [self.blueView setChangeLabelWithBlock:changeLabelBlock];
+    [self.greenView setChangeLabelWithBlock:changeLabelBlock];
+    [self.yellowView setChangeLabelWithBlock:changeLabelBlock];
 }
 
 @end

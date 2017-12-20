@@ -10,8 +10,6 @@
 
 @interface BlockView ()
 
-@property (strong, nonatomic) UILabel *label;
-
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
 @end
@@ -24,9 +22,9 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        _label = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.viewNamelabel = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        [self addSubview:self.label];
+        [self addSubview:self.viewNamelabel];
         [self setUpConstraints];
         
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -39,35 +37,31 @@
 
 #pragma mark - Object Life Cycle
 
-- (void)dealloc {
-    [self removeGestureRecognizer:self.tapGestureRecognizer];
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self.viewNamelabel setText:self.viewNameString];
 }
 
-#pragma mark - Accessor Methods
-
-- (void)setLabelString:(NSString *)labelString {
-    _labelString = labelString;
-    
-    if (self.label) {
-        [self.label setText:self.labelString];
-    }
+- (void)dealloc {
+    [self removeGestureRecognizer:self.tapGestureRecognizer];
 }
 
 #pragma mark - Actions
 
 - (void)tapDelegationView:(id)sender {
-    NSString *fixedLabelString = self.sendingString;
+    NSString *sendingString = [NSString stringWithFormat:@"%@ tapped", self.viewNameString];
     
-    self.fixLabelWithBlock(fixedLabelString);
+    self.changeLabelWithBlock(sendingString);
 }
 
 #pragma mark - Private Methods
 
 - (void)setUpConstraints {
-    [self.label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.viewNamelabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    NSLayoutConstraint *labelCenterXConstraint = [self.label.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
-    NSLayoutConstraint *labelCenterYConstraint = [self.label.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
+    NSLayoutConstraint *labelCenterXConstraint = [self.viewNamelabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
+    NSLayoutConstraint *labelCenterYConstraint = [self.viewNamelabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
     
     [NSLayoutConstraint activateConstraints:@[labelCenterXConstraint,
                                               labelCenterYConstraint]];

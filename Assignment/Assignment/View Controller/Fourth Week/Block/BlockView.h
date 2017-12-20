@@ -10,9 +10,9 @@
 
 @interface BlockView : UIView
 
-@property (copy, nonatomic) IBInspectable NSString *labelString;
-@property (copy, nonatomic) IBInspectable NSString *sendingString;
+@property (strong, nonatomic) UILabel *viewNamelabel;
+@property (copy, nonatomic) IBInspectable NSString *viewNameString;
 
-@property (copy, nonatomic) void (^fixLabelWithBlock)(NSString *);
+@property (copy, nonatomic) void (^changeLabelWithBlock)(NSString *);
 
 @end

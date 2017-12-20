@@ -28,8 +28,7 @@
                     <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Green"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Green View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Green View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-5D-bn7" customClass="BlockView">
@@ -37,8 +36,7 @@
                     <color key="backgroundColor" red="0.24462260899999999" green="0.38733166450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Blue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Blue View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Blue View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8a-Rv-6Xv" customClass="BlockView">
@@ -46,8 +44,7 @@
                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Red"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Red View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Red View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edi-gC-moQ" customClass="BlockView">
@@ -55,8 +52,7 @@
                     <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Yellow"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Yellow View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Yellow View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
