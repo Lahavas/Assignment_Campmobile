@@ -10,7 +10,7 @@
 
 @interface NotificationView ()
 
-@property (strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UILabel *viewNamelabel;
 
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
@@ -24,9 +24,9 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        _label = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.viewNamelabel = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        [self addSubview:self.label];
+        [self addSubview:self.viewNamelabel];
         [self setUpConstraints];
         
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -34,12 +34,18 @@
         [self addGestureRecognizer:self.tapGestureRecognizer];
         
         [NSNotificationCenter.defaultCenter addObserver:self
-                                               selector:@selector(fixLabel:)
-                                                   name:notificationName
+                                               selector:@selector(changeLabel:)
+                                                   name:changeLabelTextNotificationName
                                                  object:nil];
     }
     
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self.viewNamelabel setText:self.viewNameString];
 }
 
 #pragma mark - Object Life Cycle
@@ -50,40 +56,31 @@
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
-#pragma mark - Accessor Methods
-
-- (void)setLabelString:(NSString *)labelString {
-    _labelString = labelString;
-    
-    if (self.label) {
-        [self.label setText:self.labelString];
-    }
-}
-
 #pragma mark - Actions
 
 - (void)tapNotificationView:(id)sender {
-    NSDictionary *notificationInfo = @{userInfoKey: self.sendingString};
+    NSString *sendingString = [NSString stringWithFormat:@"%@ tapped", self.viewNameString];
+    NSDictionary *changeLabelTextNotificationInfo = @{changeLabelTextNotificationKey: sendingString};
     
-    [NSNotificationCenter.defaultCenter postNotificationName:notificationName
+    [NSNotificationCenter.defaultCenter postNotificationName:changeLabelTextNotificationName
                                                       object:self
-                                                    userInfo:notificationInfo];
+                                                    userInfo:changeLabelTextNotificationInfo];
 }
 
-- (void)fixLabel:(NSNotification *)notification {
-    NSDictionary *userInfo = notification.userInfo;
-    NSString *labelText = userInfo[userInfoKey];
+- (void)changeLabel:(NSNotification *)notification {
+    NSDictionary *changeLabelTextNotificationInfo = notification.userInfo;
+    NSString *labelString = changeLabelTextNotificationInfo[changeLabelTextNotificationKey];
     
-    [self setLabelString:labelText];
+    [self.viewNamelabel setText:labelString];
 }
 
 #pragma mark - Private Methods
 
 - (void)setUpConstraints {
-    [self.label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.viewNamelabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    NSLayoutConstraint *labelCenterXConstraint = [self.label.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
-    NSLayoutConstraint *labelCenterYConstraint = [self.label.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
+    NSLayoutConstraint *labelCenterXConstraint = [self.viewNamelabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
+    NSLayoutConstraint *labelCenterYConstraint = [self.viewNamelabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
     
     [NSLayoutConstraint activateConstraints:@[labelCenterXConstraint,
                                               labelCenterYConstraint]];

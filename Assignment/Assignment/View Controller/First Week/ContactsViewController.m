@@ -80,6 +80,7 @@
                   forControlEvents:UIControlEventTouchUpInside];
     
     [self.floatingButton setTitle:@"Add" forState:UIControlStateNormal];
+    [self.floatingButton setImage:[UIImage imageNamed:@"ic_add_circle"] forState:UIControlStateNormal];
     
     CGFloat floatingButtonMarginRate = 0.8;
     CGFloat floatingButtonSize = 65.0;
