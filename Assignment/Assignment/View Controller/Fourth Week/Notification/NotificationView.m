@@ -42,13 +42,13 @@
     return self;
 }
 
+#pragma mark - Object Life Cycle
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
     [self.viewNamelabel setText:self.viewNameString];
 }
-
-#pragma mark - Object Life Cycle
 
 - (void)dealloc {
     [self removeGestureRecognizer:self.tapGestureRecognizer];

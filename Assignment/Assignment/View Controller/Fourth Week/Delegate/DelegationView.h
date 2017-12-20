@@ -11,14 +11,14 @@
 @protocol LabelChangeDelegate <NSObject>
 
 @required
-- (void)delegationViewTap:(NSString *)string;
+- (void)delegationViewLabelChangedString:(NSString *)string;
 
 @end
 
 @interface DelegationView : UIView
 
-@property (copy, nonatomic) IBInspectable NSString *labelString;
-@property (copy, nonatomic) IBInspectable NSString *sendingString;
+@property (strong, nonatomic) UILabel *viewNamelabel;
+@property (copy, nonatomic) IBInspectable NSString *viewNameString;
 
 @property (weak, nonatomic) id<LabelChangeDelegate> delegate;
 

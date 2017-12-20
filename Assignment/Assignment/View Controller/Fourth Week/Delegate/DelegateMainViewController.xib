@@ -23,22 +23,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dU-on-g2y" customClass="DelegationView">
-                    <rect key="frame" x="195" y="36" width="163.5" height="300"/>
-                    <color key="backgroundColor" red="0.24462260899999999" green="0.38733166450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <gestureRecognizers/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Blue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Blue View Tapped"/>
-                    </userDefinedRuntimeAttributes>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-sZ-q3U" customClass="DelegationView">
                     <rect key="frame" x="195" y="351.5" width="163.5" height="299.5"/>
                     <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Yellow"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Yellow View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Yellow View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-1e-1cj" customClass="DelegationView">
@@ -46,8 +36,7 @@
                     <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Green"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Green View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Green View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZw-dk-UF1" customClass="DelegationView">
@@ -55,8 +44,15 @@
                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="labelString" value="Red"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sendingString" value="Red View Tapped"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Red View"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dU-on-g2y" customClass="DelegationView">
+                    <rect key="frame" x="195" y="36" width="163.5" height="300"/>
+                    <color key="backgroundColor" red="0.24462260899999999" green="0.38733166450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="viewNameString" value="Blue View"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

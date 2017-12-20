@@ -34,11 +34,11 @@
 
 #pragma mark - Label Change Delegation
 
-- (void)delegationViewTap:(NSString *)string {
-    [self.redView setLabelString:string];
-    [self.blueView setLabelString:string];
-    [self.greenView setLabelString:string];
-    [self.yellowView setLabelString:string];
+- (void)delegationViewLabelChangedString:(NSString *)string {
+    [self.redView.viewNamelabel setText:string];
+    [self.blueView.viewNamelabel setText:string];
+    [self.greenView.viewNamelabel setText:string];
+    [self.yellowView.viewNamelabel setText:string];
 }
 
 @end
